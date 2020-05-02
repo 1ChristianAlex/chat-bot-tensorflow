@@ -1,7 +1,8 @@
 import { createInterface } from 'readline';
 import { tfLearn } from './classes/';
+import app from './server/socket.io';
 
-const tfl = new tfLearn();
+// const tfl = new tfLearn();
 
 // const neural = tfl.model.predict;
 
@@ -18,3 +19,5 @@ const readLine = (textMensage: string): Promise<string> => {
     });
   });
 };
+
+app();

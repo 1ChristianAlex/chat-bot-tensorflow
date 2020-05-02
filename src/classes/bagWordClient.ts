@@ -1,6 +1,6 @@
 import { WordTokenizer, PorterStemmerPt } from 'natural';
 
-const clientBagWords = (toTokenize: string, words: string[]) => {
+const clientBagWords = (toTokenize: string, words: string[]): number[] => {
   const bag = Array(words.length);
   for (let index = 0; index < bag.length; index++) {
     bag[index] = 0;
@@ -20,7 +20,7 @@ const clientBagWords = (toTokenize: string, words: string[]) => {
     });
   });
 
-  return Array.from(bag);
+  return bag;
 };
 
-export default { clientBagWords };
+export { clientBagWords };

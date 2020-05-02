@@ -12,33 +12,35 @@ export default class TFLearn extends WordProcessing {
   }
 
   private async createNeural() {
-    console.log([this.outputs.length, this.training.length]);
+    const model = tf.sequential();
+    // const input = tf.input({
+    //   shape: [this.outputRow.length, this.training.length],
+    // });
 
-    const input = tf.input({
-      shape: [this.outputs.length, this.training.length],
+    const y = tf.layers.dense({
+      units: this.outputRow[0].length,
+      activation: 'softmax',
+      inputShape: [this.training[0].length],
     });
 
-    const x = tf.layers
-      .reshape({ targetShape: [this.outputs.length * this.training.length] })
-      .apply(input);
-    const y = tf.layers
-      .dense({ units: 8, activation: 'softmax' })
-      .apply(x) as tf.SymbolicTensor;
-    const model = tf.model({ inputs: input, outputs: y });
+    model.add(y);
 
-    const xTraining = tf.tensor(this.training);
-    const yTraining = tf.tensor(this.outputs);
+    const xTraining = tf.tensor2d(this.training);
+    const yTraining = tf.tensor2d(this.outputRow);
 
     model.compile({
       optimizer: 'sgd',
       loss: 'meanSquaredError',
     });
 
-    await model.fit(xTraining, yTraining, {
-      batchSize: 10,
-      epochs: 1,
-    });
-
+    await model
+      .fit(xTraining, yTraining, {
+        batchSize: 10,
+        epochs: 1,
+      })
+      .then(function () {
+        console.log(model.predict(xTraining));
+      });
     this.model = model;
 
     return this.model;

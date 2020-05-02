@@ -16,8 +16,8 @@ export default class WordProcessing extends WordTokenizer {
   public outputs: string[] = [];
   public stemmed: string[] = [];
 
-  public training = [];
-  public outputTraing = [];
+  public training: number[][] = [];
+  public outputRow: number[][] = [];
 
   public tokenizeIntents(): void {
     this.intentsJson.intents.forEach((block) => {
@@ -61,8 +61,8 @@ export default class WordProcessing extends WordTokenizer {
         PorterStemmerPt.stem(wordItem).toLowerCase()
       );
 
-      stemmedWordsSents.forEach((stemmedWord) => {
-        if (this.words.includes(stemmedWord)) {
+      this.stemmed.forEach((stemmedWord) => {
+        if (stemmedWordsSents.includes(stemmedWord)) {
           bag.push(1);
         } else {
           bag.push(0);
@@ -71,9 +71,10 @@ export default class WordProcessing extends WordTokenizer {
 
       const outputRow = [...outputEmpty];
       outputRow[this.intents.indexOf(this.outputs[index])] = 1;
+
       this.training.push(bag);
 
-      this.outputTraing.push(outputRow);
+      this.outputRow.push(outputRow);
     });
   }
 }

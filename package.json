@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node-dev --respawn --transpileOnly src/main.ts"
+    "dev": "ts-node-dev --respawn --inspect --transpileOnly src/main.ts"
   },
   "dependencies": {
     "@tensorflow/tfjs": "^1.7.4",
