@@ -1,5 +1,5 @@
 export class Conversa {
-    mensagem: string; 
-    usuario: boolean;
-    error: boolean;
+  mensagem: string;
+  usuario: boolean;
+  error: boolean;
 }
