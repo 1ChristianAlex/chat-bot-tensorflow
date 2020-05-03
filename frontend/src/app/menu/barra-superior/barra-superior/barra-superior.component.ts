@@ -10,6 +10,7 @@ export class BarraSuperiorComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
 }
