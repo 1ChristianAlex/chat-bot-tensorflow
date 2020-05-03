@@ -1,6 +1,6 @@
 .modal{
     height: 600px;
-    width: 650px;
+    width: 700px;
     border-radius: 2px;
     background-color: #d2f5f5;
     box-shadow: 0 2px 10px 0 rgba(0,0,0,0.2);
@@ -59,12 +59,30 @@
             margin-left: 10px;
             margin-top: 30px;
             margin-bottom: none;
-            background-color: #056779;
+            background-color: #12e482;
             
         }
-        &__botao-audio-microphone{
+        &__botao-stop{
+            padding-bottom: 30px;
+            width: 50px;
+            height: 50px;
+            margin-left: 10px;
+            margin-top: 30px;
+            margin-bottom: none;
+            background-color: #e73737;
+            
+        }
+        &__botao-audio-icon{
             width: 20px;
             height: 20px;
+            margin-bottom: 5px;
+            position: relative;
+            color: white;
+            
+        }
+        &__botao-stop-icon{
+            width: 15px;
+            height: 15px;
             margin-bottom: 5px;
             position: relative;
             color: white;
@@ -176,6 +194,21 @@
             padding-left: 10px;
             padding-right: 10px;
         
+        }
+        &__mensagem-audio {
+             padding-bottom: 5px;
+             padding-top: 5px;
+             flex-direction: center;
+             width: 200px;
+             height: 50px;
+             display: list-item;
+             margin-left: 10px;
+             display: flex;
+             margin-top: 10px;
+             position: relative;
+             padding-left: 10px;
+             padding-right: 10px;
+
         }
     }
 }
