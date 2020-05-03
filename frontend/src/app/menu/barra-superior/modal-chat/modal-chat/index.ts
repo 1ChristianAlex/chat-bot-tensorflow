@@ -1,1 +1,1 @@
-export * from  './modal-chat.component';
+export * from './modal-chat.component';
