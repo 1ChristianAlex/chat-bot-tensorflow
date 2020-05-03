@@ -8,7 +8,8 @@ import { BarraSuperiorComponent } from './menu/barra-superior/barra-superior/bar
 import { ModalChatComponent } from './menu/barra-superior/modal-chat/modal-chat/modal-chat.component';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
-import { SocketChatService } from '../app/services/socket-chat.service';
+import { SocketChatService } from './socket/services/socket-chat.service';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [AppComponent, BarraSuperiorComponent, ModalChatComponent],
@@ -19,8 +20,9 @@ import { SocketChatService } from '../app/services/socket-chat.service';
     MatSidenavModule,
     FormsModule,
     MatButtonModule,
+    MatIconModule,
   ],
-  exports: [MatSidenavModule, MatButtonModule],
+  exports: [MatSidenavModule, MatButtonModule, MatIconModule],
   providers: [SocketChatService],
   bootstrap: [AppComponent],
 })
