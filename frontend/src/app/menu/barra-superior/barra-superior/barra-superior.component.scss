@@ -12,17 +12,17 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%) ;
-    cursor: pointer;
+    
     &__imagem{
-        height: 80px;
+        height: 70px;
         &__title{
             font-size: 30px;
             font-family: "Montserrant";
             color: rgb(255, 255, 255);
             text-transform: uppercase; 
+            margin-bottom: auto;
         }
     }
-   
 }
 .imagem{
     width: 50px;

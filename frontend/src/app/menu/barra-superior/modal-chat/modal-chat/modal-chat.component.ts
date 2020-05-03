@@ -1,32 +1,59 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { isNull } from 'util';
-import { SocketChatService } from 'src/app/services/socket-chat.service';
+import { SocketChatService } from '../../../../socket/services/socket-chat.service';
+import { Conversa }  from '../../../model/Conversa'
+
 @Component({
   selector: 'app-modal-chat',
   templateUrl: './modal-chat.component.html',
   styleUrls: ['./modal-chat.component.scss'],
 })
 export class ModalChatComponent implements OnInit {
-  mensagens: string[] = [];
-  valor: string;
 
-  mensagens: string[] = [];
+  mensagens: Conversa[] = [];
   valor: string;
-  usuario = true;
+  usuario: boolean = true;
+
   constructor(private Socket: SocketChatService) {}
 
   ngOnInit(): void {}
 
-  preencherMensagem() {}
   onSubmit() {
     return this.valor != null ? this.valor : null;
   }
+
+  async preencherMensagem() {
+    const response = await this.Socket.GetResponse();
+
+    this.mensagens.push({
+      mensagem: response,
+      usuario: false,
+      error: false
+    })
+  }
+  
   enviarDado() {
     if (this.valor) {
-      this.mensagens.push(this.valor);
+       this.mensagens.push({
+        mensagem: this.valor,
+        usuario: true,
+        error: false
+       })      
       this.Socket.SendMensage(this.valor);
+      this.preencherMensagem();
+    }
+    else{
+      this.preencherMensagemVazia(); 
     }
     this.mensagens = this.mensagens.filter((mensagem) => !isNull(mensagem));
     this.valor = null;
+
+  }
+  preencherMensagemVazia(){
+    this.mensagens.push({
+      mensagem: "Favor Digitar uma Mensagem...",
+      usuario: false, 
+      error: true
+    })
   }
 }

@@ -16,7 +16,7 @@ const runServer = () => {
     console.log('connection by', socket.client.id);
 
     socket.on('chat-mensage', (data: string) => {
-      Chat(data);
+      // Chat(data);
       console.log(data);
       socket.emit('chat-response', { response: `${data} direto do backend` });
     });
