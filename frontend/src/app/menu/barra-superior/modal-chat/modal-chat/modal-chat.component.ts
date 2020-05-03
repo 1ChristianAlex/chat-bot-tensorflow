@@ -12,7 +12,7 @@ export class ModalChatComponent implements OnInit {
 
   mensagens: string[] = []; 
   valor : string;
-
+  usuario: boolean = true;
 
   constructor() { }
 
