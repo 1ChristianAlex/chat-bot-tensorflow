@@ -1,0 +1,333 @@
+{
+  "intents": [
+    {
+      "tag": "boas-vindas",
+      "patterns": [
+        "Oi",
+        "Como você está?",
+        "Tem alguém ai?",
+        "Olá",
+        "Bom dia",
+        "Boa tarde",
+        "Boa noite",
+        "Tudo bem?",
+        "Ei",
+        "E ai, beleza?",
+        "E ai, blz?",
+        "Hi",
+        "Hello",
+        "Oie",
+        "Oii",
+        "Oiii"
+      ],
+      "responses": [
+        "Olá! Eu sou Nino, seu garçom! O que você deseja?",
+        "Olá! Eu sou Nino, seu garçom! Como posso ajudá-lo?",
+        "Olá! Eu sou Nino, seu garçom! Há algo em que eu possa ser útil?",
+        "Sou o Garçom Nino! Bom te ver por aqui! Como posso te ajudar?",
+        "Sou o Garçom Nino! Bom te ver por aqui! O que você deseja?",
+        "Sou o Garçom Nino! É um prazer recebê-lo! Como posso te ajudar?",
+        "Sou o Garçom Nino! É um prazer recebê-lo! Como posso ser útil?",
+        "Oi! Meu nome é Nino, como posso ajudar você?",
+        "Oi! Meu nome é Nino, e estou aqui para ajudá-lo, basta você me dizer como.",
+        "Oi! Meu nome é Nino, e estou sempre a disposição, basta me dizer como posso ser hútil."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "ate-mais",
+      "patterns": [
+        "Tchau",
+        "Tchau Nino",
+        "Tchauzinho",
+        "Até mais",
+        "Até mais Nino",
+        "Até Logo",
+        "Até Logo Nino",
+        "Até depois",
+        "Até outra hora",
+        "Flw",
+        "Flw Nino",
+        "Era só isso",
+        "Era só isso mesmo",
+        "Tudo bem, Obrigado",
+        "Td bem, obrigado",
+        "Td bem, obrg",
+        "Tudo bem, brigado",
+        "Td bem, brigado",
+        "Tudo bem, valeu",
+        "Tudo bem, vlw",
+        "Vou embora",
+        "Tenha um bom dia",
+        "Adeus",
+        "Bye",
+        "Abraços",
+        "Beijos",
+        "Beijo",
+        "Bj"
+      ],
+      "responses": [
+        "Até logo!",
+        "Até depois.",
+        "Tchauzinho :)",
+        "Que pena :( Até Logo!",
+        "Espero revêlo em Breve!",
+        "Tenha um ótimo dia, até logo!",
+        "A gente se fala em breve né? Tchau!",
+        "Tchauzinho!!!",
+        "Espero ter ajudado você. Até logo!",
+        "Se ainda precisar de algo basta me chamar!",
+        "Não se preocupe, qualquer coisa é só me chamar.",
+        "Qualquer dúvida é só me chamar, estou sempre a sua disposição."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "nome",
+      "patterns": [
+        "Nome?",
+        "Qual é o seu nome?",
+        "Qual seu nome?",
+        "Como você se chama?",
+        "Como vc se chama?",
+        "Como se chama?",
+        "Você tem nome?",
+        "Como devo te chamar?",
+        "Como devo chamâ-lo?",
+        "Seu nome?",
+        "Seu nome é?"
+      ],
+      "responses": [
+        "Me chamo Nino!",
+        "Me chamo Nino, e estou aqui para ajudá-lo!",
+        "Me chamo Nino, é um prazer conhecê-lo",
+        "Eu sou o Nino!",
+        "Eu sou o Nino, é muito bom ter você aqui!",
+        "Eu sou o Nino, como posso ajudar?",
+        "Meu nome é Nino. Como vai?",
+        "Meu nome é Nino, e estou aqui para ajudar você!",
+        "Meu nome é Nino, o que posso fazer por você?",
+        "Você pode me chamar de Nino, eu estou aqui para ajudar você",
+        "Você pode me chamar de Nino, como posso ajudar você?"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "loja",
+      "patterns": [
+        "É da sorveteria?",
+        "Esse chat e da sorveteria?",
+        "Você trabalha na sorveteria?",
+        "Sorveteria?",
+        "Gostaria de falar com alguém da sorveteria",
+        "Como falo com alguém da sorveteria?",
+        "Qual é o telefone da sorveteria?"
+      ],
+      "responses": [
+        "Sim, eu sou o assistente virtual da Sorveteria Cremosinhos. Posso ajudar?",
+        "Sim, aqui é da Sorveteria Cremosinhos, como posso ajudá-lo?",
+        "Sim, esse é o atendimento virtual da Sorveteria Cremosinhos, como posso ajudá-lo?",
+        "Isso, Sorveteria Cremosinhos ao seu dispor, como posso ajudar?",
+        "Isso, Sorveteria Cremosinhos ao seu dispor, o que posso fazer por você?",
+        "Isso, Sorveteria Cremosinhos ao seu dispor, gostaria de realizar um pedido?",
+        "Nosso contato telefônico é (99) 9 9999 - 9999, e esse também é nosso whatsapp, mas eu também posso te auxiliar com suas dúvidas se preferir."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "funcionamento-aberto",
+      "patterns": [
+        "Vocês estão abertos até que horas?",
+        "Até que horas fica aberto?",
+        "Fica aberto até que horas?",
+        "Vocês estão abertos hoje?",
+        "Estão abertos?",
+        "Está aberto?",
+        "Tá aberto?"
+      ],
+      "responses": [
+        "Sim! Estamos a sua disposição, como podemos ajudar?",
+        "Sim, estamos abertos neste momento. Gostaria de realizar um pedido?",
+        "Estamos abertos para servir você! Como posso ajudar?",
+        "Estamos abertos neste momento, posso anotar seu pedido?",
+        "Estamos abertos, gostaria de realizar um pedido?",
+        "Estamos abertos para matar sua vontade de sorvete! Qual o seu pedido?",
+        "Sim! Estamos abertos e levamos seu pedido até você, ou aguardamos a sua visita em nossa loja :)"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "funcionamento-fechado",
+      "patterns": [
+        "Vocês estão fechados?",
+        "Já fechou?",
+        "Que horas fecha?",
+        "Fecha que horas?",
+        "Já fecharam?",
+        "Já fechou?",
+        "Estão fechados?",
+        "Está fechado?",
+        "Tá fechado?"
+      ],
+      "responses": [
+        "Lamentamos, mas estamos fechados. Nosso horário de atendimento é das 09:00 às 19:00 de Segunda a Sexta, e de 12:00 às 20:00 aos Sábados, Domingos e Feriados",
+        "Neste momentos estamos fechados. Mas você pode entrar em contato das 09:00 às 19:00 de Segunda a Sexta, e de 12:00 às 20:00 aos Sábados, Domingos e Feriados. Será um prazer atendê-lo",
+        "Nossa loja está fechada neste momento. Nosso horário de atendimento é das 09:00 às 19:00 de Segunda a Sexta, e de 12:00 às 20:00 aos Sábados, Domingos e Feriados",
+        "Ainda não estamos abertos, aguarde só mais um pouco. Lembre-se, nosso horário de atendimento é das 09:00 às 19:00 de Segunda a Sexta, e de 12:00 às 20:00 aos Sábados, Domingos e Feriados. Até logo :)"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "pedido",
+      "patterns": [
+        "Eu gostaria de realizar um pedido",
+        "Gostaria de realizar um pedido",
+        "Gostaria de pedir",
+        "Gostaria de pedir sorvete",
+        "Você pode anotar meu pedido?",
+        "Vc pode anotar meu pedido?",
+        "pode anotar meu pedido?",
+        "Posso fazer o pedido?",
+        "Pedir Sorvete",
+        "Pedir",
+        "Gostaria de pedir sorvete"
+      ],
+      "responses": [
+        "Claro! Se você já conhece a loja me informe o sabor, tamanho, e quantidade de potes desejados. Caso não conheça, posso te enviar nosso cardápio com tabela de valores?",
+        "Claro! Caso não conheça nossos produtos, podemos informa-lo sobre nossos sabores e valores disponíveis.",
+        "Para pedir basta digitar o sabor desejado, tamanho e quantidade de potes desejados e poderemos continuar. Caso não conheça nossos produtos eu posso enviar um cardápio com nossa tabela de valores para você.",
+        "Vou anotar seu pedido, me diga o sabor, o tamanho e a quantidade de potes desejados.",
+        "Você já conhece nossos produtos? Se sim me informe o seu pedido, caso contrário eu posso enviar para você nosso cardápio com nossa tabela de valores.",
+        "Para satisfazer sua vontade de sorvete temos os sabores, chocolate, morango, creme e flocos, com potes de tamanhos pequeno, médio e grande apronta entrega. Qual será o seu pedido?",
+        "Nossos sorvetes estão prontos para serem levados até você, nos sabores chocolate, morango, creme e flocos, com potes pequenos, médioe e grandes. Qual será o seu pedido?"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "endereco",
+      "patterns": [
+        "Gostaria de confirmar o pedido",
+        "Confirmar o pedido",
+        "Confirme o pedido",
+        "Confirmar",
+        "Confirme",
+        "Confirmado",
+        "Pedido correto",
+        "Pode fechar",
+        "Certo",
+        "Certinho"
+      ],
+      "responses": [
+        "Ótimo, agora me informe seu endereço para que possamos enviar o seu pedido.",
+        "Ótimo, vamos enviar seu pedido, para isso nos informe o seu endereço.",
+        "Ótimo, logo logo você estará com seu pedido em mãos, mas para isso nos informe seu endereço e enviaremos seu sorvete o quanto antes",
+        "Muito bem, me informe seu endereço e em instantes você receberá o seu pedido",
+        "Muito bem, agora me informe seu endereço para que possamos enviar o seu pedido o mais rápido possível.",
+        "Isso aí, sorvete é muito bom, e em instantes você estará se deliciando com o seu pedido, mas antes me informe o seu endereço para que possamos realizar a entrega do seu produto.",
+        "Entendido, nossos entregadores já estão a postos para entregar seu pedido, mas para isso informe o seu endereço e logo você estará com seu sorvete em mãos."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "valores",
+      "patterns": [
+        "Qual o valor do sorvete?",
+        "Qual o valor do produto?",
+        "Qual o valor?",
+        "Quanto custa?",
+        "Valores?",
+        "Qual o preço?",
+        "preço",
+        "Poderia me informar o valor do sorvete?",
+        "gostaria de saber o valor do sorvete",
+        "valor do sorvete",
+        "valor"
+      ],
+      "responses": [
+        "Nossos sorvetes estão disponíveis em três tamanhos, sendo eles: Pequeno - R$6,99, Médio - R$9,99 e Grande - 12,99. Posso anotar seu pedido?",
+        "Possuímos três tamanhos de potes diferentes com valores: Pequeno - R$6,99, Médio - R$9,99 e Grande - 12,99. Gostaria de realizar um pedido?",
+        "Nossos potes possuem três tamanhos com os respectivos valores: Pequeno - R$6,99, Médio - R$9,99 e Grande - 12,99. Podemos anotar o seu pedido?"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "sabores-disponibilidade",
+      "patterns": [
+        "Quais os sabores disponíveis?",
+        "Quais os sabores?",
+        "Sabores",
+        "Quais os sabores de sorvetes?",
+        "Qual sabor disponível?",
+        "Sabor disponível",
+        "Sabor",
+        "Quais os tipos de sorvete disponíveis?",
+        "Tipos de sorvete",
+        "Tipo",
+        "Quais sorvetes disponíveis?",
+        "Qual sorvete disponível?"
+      ],
+      "responses": [
+        "Bom, os nossos sabores disponíveis são bem variados, no momento possuímos disponíveis Chocolate, Morango, Creme e Flocos",
+        "Temos disponíveis para você sorvetes nos sabores Chocolate, Morango, Creme e Flocos",
+        "Aproveite nossos sabores de Chocolate, Morango, Creme e Flocos"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "sabores-pedido",
+      "patterns": ["Chocolate", "Morango", "Creme", "Flocos"],
+      "responses": [
+        "Chocolate é muito bom! Agora que já sei o sabor, qual o tamanho do pote que gostaria de adquirir? Pequeno, médio ou grande?",
+        "Hmmm chocolate :) Agora me informe o tamanho do pote desejado, pequeno, médio ou grande?",
+        "CHOCOLATE É O MEU FAVORITO!!! Você tem bom gosto. Me fala também o tamanho do pote que você quer, pequeno, médio ou grande?",
+        "Morango é muito bom! Agora que já sei o sabor, qual o tamanho do pote que gostaria de adquirir? Pequeno, médio ou grande?",
+        "Hmmm Morango :) Agora me informe o tamanho do pote desejado, pequeno, médio ou grande?",
+        "MORANGO É O MEU FAVORITO!!! Você tem bom gosto. Me fala também o tamanho do pote que você quer, pequeno, médio ou grande?",
+        "Creme é muito bom! Agora que já sei o sabor, qual o tamanho do pote que gostaria de adquirir? Pequeno, médio ou grande?",
+        "Hmmm Creme :) Agora me informe o tamanho do pote desejado, pequeno, médio ou grande?",
+        "CREME É O MEU FAVORITO!!! Você tem bom gosto. Me fala também o tamanho do pote que você quer, pequeno, médio ou grande?",
+        "Flocos é muito bom! Agora que já sei o sabor, qual o tamanho do pote que gostaria de adquirir? Pequeno, médio ou grande?",
+        "Hmmm Flocos :) Agora me informe o tamanho do pote desejado, pequeno, médio ou grande?",
+        "FLOCOS É O MEU FAVORITO!!! Você tem bom gosto. Me fala também o tamanho do pote que você quer, pequeno, médio ou grande?"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "tamanho-confirmacao",
+      "patterns": ["Pequeno", "Médio", "Grande"],
+      "responses": [
+        "Pequeno no tamanho, GIGANTE no sabor! Seu sorvete já está sendo preparado para o envio, enquanto isso, me informe o método de pagamento desejado.",
+        "Potes na média certa :) Seu sorvete já está sendo preparado para o envio, enquanto isso, me informe o método de pagamento desejado.",
+        "Bateu aquela vontade monstruosa de tomar sorvete? Um pote BEM GRANDE resolve seu problema. Seu sorvete já está sendo preparado para o envio, enquanto isso, me informe o método de pagamento desejado."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "metodo-pagamento",
+      "patterns": [
+        "Dinheiro",
+        "Cartão de Crédito",
+        "Crédito",
+        "Cartão de Débito",
+        "Debito"
+      ],
+      "responses": [
+        "Método de pagamento confirmado, seu pedido está pronto para ser enviado, para isso basta digitar ENVIAR, e logo logo seu sorvete estará aí.",
+        "Entendido, confirme o pedido digitando ENVIAR, depois basta aguardar alguns minutos para se deliciar com seu sorvete.",
+        "Ótimo :) agora temos tudo o que precisamos, basta confirmar a entrega digitando ENVIAR, e seu produto chegará ai o mais rápido possível!"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "envio-aguardo",
+      "patterns": ["Enviar", "Pode enviar", "Mandar", "Entregar"],
+      "responses": [
+        "Ótimo, nosso entregador está a caminho! Basta aguardar e em alguns instantes ele estará aí.",
+        "Ótimo! Em breve seu produto estará aí, basta aguardar alguns minutos.",
+        "Seu pedido já está sendo preparado e será enviado em breve, peço que você aguarde alguns minutos por gentileza.",
+        "Oba! Sorvete é sempre bom e o seu já está a caminho, aguarde alguns minutos e nosso entregador logo estará aí"
+      ],
+      "context_set": ""
+    }
+  ]
+}
