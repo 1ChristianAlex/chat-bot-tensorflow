@@ -2,10 +2,10 @@ import { IIntentsJson } from 'Interfaces/IIntents';
 import { WordTokenizer, PorterStemmerPt } from 'natural';
 
 export default class WordProcessing extends WordTokenizer {
-  constructor(private intentsJson: IIntentsJson, private StopWords: string[]) {
+  constructor(public intentsJson: IIntentsJson, private StopWords: string[]) {
     super();
-    this.tokenizeIntents();
     this.filterStopWords();
+    this.tokenizeIntents();
     this.StemmedWords();
     this.bagWordsRender();
   }
@@ -55,14 +55,15 @@ export default class WordProcessing extends WordTokenizer {
       outputEmpty[index] = 0;
     }
 
-    const bag: number[] = [];
     this.sents.forEach((sen, index) => {
-      const stemmedWordsSents: string[] = sen.map((wordItem) =>
+      const bag: number[] = [];
+      const stemmedWords: string[] = sen.map((wordItem) =>
         PorterStemmerPt.stem(wordItem).toLowerCase()
       );
+      const stemmedWordsSents = [...new Set([...stemmedWords])].sort();
 
       this.stemmed.forEach((stemmedWord) => {
-        if (stemmedWordsSents.includes(stemmedWord)) {
+        if (stemmedWord in stemmedWordsSents) {
           bag.push(1);
         } else {
           bag.push(0);
@@ -76,5 +77,6 @@ export default class WordProcessing extends WordTokenizer {
 
       this.outputRow.push(outputRow);
     });
+    console.log(this.training[1].length);
   }
 }

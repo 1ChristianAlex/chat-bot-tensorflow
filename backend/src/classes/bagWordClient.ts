@@ -1,27 +1,27 @@
 import { WordTokenizer, PorterStemmerPt } from 'natural';
 
 const clientBagWords = (toTokenize: string, words: string[]): number[][] => {
-  const tensorItem: number[][] = [];
-  const bag = Array(words.length);
-  for (let index = 0; index < bag.length; index++) {
-    bag[index] = 0;
+  const tokenize = new WordTokenizer();
+  const outputEmpty = Array(words.length);
+  for (let index = 0; index < outputEmpty.length; index++) {
+    outputEmpty[index] = 0;
   }
-  const tokenizer = new WordTokenizer();
+  const sWords = tokenize.tokenize(toTokenize);
 
-  const wordsTokenizer = tokenizer.tokenize(toTokenize);
-  const wordsStemmed = wordsTokenizer.map((words) =>
-    PorterStemmerPt.stem(words.toLowerCase())
-  );
+  const stmed = sWords.map((w) => PorterStemmerPt.stem(w));
 
-  wordsStemmed.forEach((stemmed) => {
-    words.forEach((word, i) => {
-      if (stemmed === word) {
-        bag[i] = 1;
+  stmed.forEach((se) => {
+    words.forEach((w, i) => {
+      if (se === w) {
+        outputEmpty[i] = 1;
       }
     });
   });
-  tensorItem.push(bag);
-  return tensorItem;
+
+  const bag = Array.from([outputEmpty]);
+
+  console.log(stmed);
+  return bag;
 };
 
 export { clientBagWords };

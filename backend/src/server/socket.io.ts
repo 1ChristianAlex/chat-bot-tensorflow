@@ -15,10 +15,10 @@ const runServer = () => {
     console.log('socket is running ');
     console.log('connection by', socket.client.id);
 
-    socket.on('chat-mensage', (data: string) => {
-      Chat(data);
+    socket.on('chat-mensage', async (data: string) => {
+      const chatResponse = await Chat(data);
       console.log(data);
-      socket.emit('chat-response', { response: `${data} direto do backend` });
+      socket.emit('chat-response', { response: chatResponse });
     });
   });
   http.listen(PORT, hostname, () => {
