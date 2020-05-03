@@ -10,7 +10,13 @@ export class ModalChatComponent implements OnInit {
   mensagens: string[] = [];
   valor: string;
 
+<<<<<<< HEAD
+  mensagens: string[] = []; 
+  valor : string;
+  usuario: boolean = true;
+=======
   constructor(private Socket: SocketChatService) {}
+>>>>>>> 94290b6c93566710bb75a7064ceddbef90006f35
 
   ngOnInit(): void {}
 

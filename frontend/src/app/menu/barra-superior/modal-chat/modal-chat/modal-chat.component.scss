@@ -17,6 +17,15 @@
     background-color: #056779;
     border-radius: 3px;
 
+    &__logo{
+        position: absolute;
+        width: 50px;
+        height: 70px;
+        display: block;
+        margin-left: 250px;
+        margin-right: auto;
+    }
+
      &__input{
         margin-top: 530px;
         width: 450px;
@@ -40,6 +49,8 @@
      }
     }
     &__area-text{
+        overflow-wrap: break-word;
+        word-break: break-all;
         height: 400px;
         width: 476px;
         border-radius: 2px;
@@ -56,7 +67,7 @@
         &__imagem{
             width: 400px;
             height: 400px;
-            margin-left: auto;
+            margin-left: 20px;
             margin-right: auto;
             opacity: 0.5;
             position: absolute;
@@ -65,24 +76,55 @@
         &__mensagem{
             opacity: 1;
             image-resolution: 100px;
-            width: 30%;
+            width: fit-content;
+            height: fit-content;
+            padding-left: 10px;
+            padding-right: 10px;
             margin: auto;
-            height: 30px;
-            font-size: 12px;
+            padding-bottom: 5px;
+            padding-top: 5px;
+            font-size: 10px;
             flex-direction: center;
             border-radius: 4px;
             background-color: #056779;
             box-shadow: 0 2px 10px 0 rgba(0,0,0,0.2);
             font-family: Roboto;
-            text-align: center;
+            text-align: right;
             display: grid;
             font-weight: bold;
             color: white;
-            margin-left: 2px;
+            margin-right: 10px;
             text-transform: uppercase;
             text-transform: bold;
             position: relative;
-            margin-top: 3px;
+            margin-top: 5px;
+        }
+        &__mensagem-bot{
+            opacity: 1;
+            image-resolution: 100px;
+            width: fit-content;
+            margin: auto;
+            height: fit-content;
+            padding-bottom: 5px;
+            padding-top: 5px;
+            font-size: 10px;
+            flex-direction: center;
+            border-radius: 4px;
+            background-color: #6147d8;
+            box-shadow: 0 2px 10px 0 rgba(0,0,0,0.2);
+            font-family: Roboto;
+            text-align: left;
+            display: grid;
+            font-weight: bold;
+            color: white;
+            margin-left: 10px;
+            text-transform: uppercase;
+            text-transform: bold;
+            position: relative;
+            margin-top: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+        
         }
     }
 }

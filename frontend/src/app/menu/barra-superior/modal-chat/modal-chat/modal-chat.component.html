@@ -1,8 +1,15 @@
 <div class="modal"> 
     <div class="modal__header"> 
+      <img src="../../../../../assets/images/014-ice-cream-11.svg" class="modal__header__logo" alt="">
         <div class="modal__area-text">
             <img src="../../../../../assets/images/bot.svg" class="modal__area-text__imagem" alt="">
-          <span class="modal__area-text__mensagem" *ngFor="let input of mensagens">{{input}}</span>
+            <div *ngIf="usuario">
+              <span class="modal__area-text__mensagem" *ngFor="let input of mensagens">{{input}}</span>
+            </div>
+            <div *ngIf="!usuario">
+              <span class="modal__area-text__mensagem-bot" *ngFor="let input of mensagens">{{input}}</span>
+            </div>
+
         </div>
         <form (submit) ="onSubmit()">
             <input [(ngModel)]="valor" name="valor" class="modal__header__input" type="text" > 
