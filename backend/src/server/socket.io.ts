@@ -16,9 +16,8 @@ const runServer = () => {
     console.log('connection by', socket.client.id);
 
     socket.on('chat-mensage', (data: string) => {
-      Chat(data);
-      console.log(JSON.parse(data));
-      socket.emit('legal');
+      console.log(data);
+      socket.emit('chat-response', { response: `${data} direto do backend` });
     });
   });
   http.listen(PORT, hostname, () => {
