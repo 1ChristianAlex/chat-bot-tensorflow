@@ -1,6 +1,7 @@
 import express from 'express';
 import server from 'http';
 import io from 'socket.io';
+import { Chat } from './chat';
 
 const hostname = 'localhost';
 const PORT = 5555;
@@ -14,9 +15,9 @@ const runServer = () => {
     console.log('socket is running ');
     console.log('connection by', socket.client.id);
 
-    socket.on('chat-mensage', (data) => {
-      console.log(JSON.parse(data));
-      socket.emit('legal');
+    socket.on('chat-mensage', (data: string) => {
+      console.log(data);
+      socket.emit('chat-response', { response: `${data} direto do backend` });
     });
   });
   http.listen(PORT, hostname, () => {
