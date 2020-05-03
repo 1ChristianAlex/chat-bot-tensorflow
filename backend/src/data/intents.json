@@ -34,7 +34,54 @@
       ],
       "context_set": ""
     },
-
+    {
+      "tag": "ate-mais",
+      "patterns": [
+        "Tchau",
+        "Tchau Nino",
+        "Tchauzinho",
+        "Até mais",
+        "Até mais Nino",
+        "Até Logo",
+        "Até Logo Nino",
+        "Até depois",
+        "Até outra hora",
+        "Flw",
+        "Flw Nino",
+        "Era só isso",
+        "Era só isso mesmo",
+        "Tudo bem, Obrigado",
+        "Td bem, obrigado",
+        "Td bem, obrg",
+        "Tudo bem, brigado",
+        "Td bem, brigado",
+        "Tudo bem, valeu",
+        "Tudo bem, vlw",
+        "Vou embora",
+        "Tenha um bom dia",
+        "Adeus",
+        "Bye",
+        "Abraços",
+        "Beijos",
+        "Beijo",
+        "Bj"
+      ],
+      "responses": [
+        "Até logo!",
+        "Até depois.",
+        "Tchauzinho :)",
+        "Que pena :( Até Logo!",
+        "Espero revêlo em Breve!",
+        "Tenha um ótimo dia, até logo!",
+        "A gente se fala em breve né? Tchau!",
+        "Tchauzinho!!!",
+        "Espero ter ajudado você. Até logo!",
+        "Se ainda precisar de algo basta me chamar!",
+        "Não se preocupe, qualquer coisa é só me chamar.",
+        "Qualquer dúvida é só me chamar, estou sempre a sua disposição."
+      ],
+      "context_set": ""
+    },
     {
       "tag": "nome",
       "patterns": [

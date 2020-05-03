@@ -4,10 +4,14 @@ import { WordTokenizer, PorterStemmerPt } from 'natural';
 export default class WordProcessing extends WordTokenizer {
   constructor(public intentsJson: IIntentsJson, private StopWords: string[]) {
     super();
-    this.filterStopWords();
     this.tokenizeIntents();
     this.StemmedWords();
     this.bagWordsRender();
+    this.filterStopWords();
+    // console.log(this.words);
+    // console.log(this.intents);
+    // console.log(this.training);
+    // console.log(this.words);
   }
 
   public words: string[] = [];
@@ -29,7 +33,10 @@ export default class WordProcessing extends WordTokenizer {
 
       block.patterns.forEach((pattern) => {
         const tokenizePattens = this.tokenize(pattern);
-        this.words = [...new Set([...this.words, ...tokenizePattens])];
+        // this.words = [...new Set([...this.words, ...tokenizePattens])];
+        this.words = [...this.words, ...tokenizePattens].map((wordItem) =>
+          wordItem.toLowerCase()
+        );
         this.sents.push(tokenizePattens);
         this.outputs.push(tag);
       });
@@ -63,7 +70,7 @@ export default class WordProcessing extends WordTokenizer {
       const stemmedWordsSents = [...new Set([...stemmedWords])].sort();
 
       this.stemmed.forEach((stemmedWord) => {
-        if (stemmedWord in stemmedWordsSents) {
+        if (stemmedWords.includes(stemmedWord)) {
           bag.push(1);
         } else {
           bag.push(0);
@@ -74,9 +81,7 @@ export default class WordProcessing extends WordTokenizer {
       outputRow[this.intents.indexOf(this.outputs[index])] = 1;
 
       this.training.push(bag);
-
       this.outputRow.push(outputRow);
     });
-    console.log(this.training[1].length);
   }
 }
