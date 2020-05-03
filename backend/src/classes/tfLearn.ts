@@ -27,6 +27,7 @@ export default class TFLearn extends WordProcessing {
 
     const xTraining = tf.tensor2d(this.training);
     const yTraining = tf.tensor2d(this.outputRow);
+    console.log(xTraining);
 
     model.compile({
       optimizer: 'sgd',
@@ -39,7 +40,7 @@ export default class TFLearn extends WordProcessing {
         epochs: 1,
       })
       .then(function () {
-        console.log(model.predict(xTraining));
+        console.log('Model loaded');
       });
     this.model = model;
 
