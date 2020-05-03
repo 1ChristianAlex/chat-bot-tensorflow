@@ -1,21 +1,16 @@
 import { Component, OnInit, ViewChild ,ChangeDetectorRef} from '@angular/core';
 import { isNull } from 'util';
 import { SocketChatService } from '../../../../socket/services/socket-chat.service';
-<<<<<<< HEAD
 import { Conversa }  from '../../../model/Conversa';
 import { DomSanitizer } from '@angular/platform-browser';
 
 declare var MediaRecorder: any;
-=======
-import { Conversa } from '../../../model/Conversa';
->>>>>>> bb660012c493fc722194a307cba023b9d999260c
 
 @Component({
   selector: 'app-modal-chat',
   templateUrl: './modal-chat.component.html',
   styleUrls: ['./modal-chat.component.scss'],
 })
-<<<<<<< HEAD
 
 export class ModalChatComponent implements OnInit {
   chunks = [];
@@ -25,14 +20,6 @@ export class ModalChatComponent implements OnInit {
   usuario: boolean = true;
   mediaRecorder:any;
   constructor(private Socket: SocketChatService, private dom: DomSanitizer, private cd: ChangeDetectorRef) {}
-=======
-export class ModalChatComponent implements OnInit {
-  mensagens: Conversa[] = [];
-  valor: string;
-  usuario = true;
-
-  @ViewChild('chatWindow') chatWindow: HTMLDivElement;
->>>>>>> bb660012c493fc722194a307cba023b9d999260c
 
 
 
@@ -47,32 +34,19 @@ export class ModalChatComponent implements OnInit {
       mensagem: String(response),
       usuario: false,
       error: false,
-<<<<<<< HEAD
       audio:false
     })
-=======
-    });
->>>>>>> bb660012c493fc722194a307cba023b9d999260c
   }
 
   enviarDado() {
-    console.log(this.chatWindow);
 
     if (this.valor) {
-<<<<<<< HEAD
        this.mensagens.push({
         mensagem: String(this.valor),
         usuario: true,
         error: false,
         audio:false
        })      
-=======
-      this.mensagens.push({
-        mensagem: this.valor,
-        usuario: true,
-        error: false,
-      });
->>>>>>> bb660012c493fc722194a307cba023b9d999260c
       this.Socket.SendMensage(this.valor);
       this.preencherMensagem();
     } else {
@@ -81,7 +55,6 @@ export class ModalChatComponent implements OnInit {
     this.mensagens = this.mensagens.filter((mensagem) => !isNull(mensagem));
     this.valor = null;
   }
-<<<<<<< HEAD
   ngOnInit(): void {
     navigator.getUserMedia(
 			{audio: true},
@@ -144,14 +117,6 @@ export class ModalChatComponent implements OnInit {
       error: true,
       audio:false
     })
-=======
-  preencherMensagemVazia() {
-    this.mensagens.push({
-      mensagem: 'Favor Digitar uma Mensagem...',
-      usuario: false,
-      error: true,
-    });
->>>>>>> bb660012c493fc722194a307cba023b9d999260c
   }
 
   pararAudio(){

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <div class="modal"> 
     <div class="modal__header"> 
       <img src="../../../../../assets/images/014-ice-cream-11.svg" class="modal__header__logo" alt="">
@@ -28,56 +27,5 @@
             </button>
            
         </form>
-=======
-<div class="modal">
-  <div class="modal__header">
-    <img
-      src="../../../../../assets/images/014-ice-cream-11.svg"
-      class="modal__header__logo"
-      alt=""
-    />
-    <div #chatWindow class="modal__area-text">
-      <img
-        src="../../../../../assets/images/bot.svg"
-        class="modal__area-text__imagem"
-        alt=""
-      />
-      <span
-        [ngClass]="
-          input.usuario && !input.error
-            ? 'modal__area-text__mensagem'
-            : !input.usuario && input.error
-            ? 'modal__area-text__mensagem-bot-error'
-            : 'modal__area-text__mensagem-bot'
-        "
-        *ngFor="let input of mensagens"
-        >{{ input.mensagem }}</span
-      >
->>>>>>> bb660012c493fc722194a307cba023b9d999260c
     </div>
-    <form (submit)="onSubmit()">
-      <input
-        [(ngModel)]="valor"
-        name="valor"
-        class="modal__header__input"
-        type="text"
-      />
-      <button
-        mat-raised-button
-        color
-        color="primary"
-        (click)="enviarDado()"
-        class="modal__header__input__botao"
-      >
-        <span class="modal__header__input__botao__text">enviar</span>
-      </button>
-      <button mat-fab color="primary" class="modal__header__input__botao-audio">
-        <img
-          src="../../../../../assets/images/microphone.svg"
-          class="modal__header__input__botao-audio-microphone"
-          alt=""
-        />
-      </button>
-    </form>
   </div>
-</div>
