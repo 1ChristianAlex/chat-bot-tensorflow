@@ -13,10 +13,7 @@ def createNeural():
     # camada de entrada
     net = tfl.input_data(shape=[None, len(xtraining[0])])
     # oito neuronios por camada oculta
-    net = tfl.fully_connected(net, 8)
-    net = tfl.fully_connected(net, 8)
-    net = tfl.fully_connected(net, 8)
-    net = tfl.fully_connected(net, 8)
+    net = tfl.fully_connected(net, 30)
     # camada de saida
     net = tfl.fully_connected(
         net, len(yTraining[0]), activation="softmax")
@@ -25,5 +22,6 @@ def createNeural():
 
     # criando o modelo
     model = tfl.DNN(net)
-    model.fit(xtraining, yTraining, n_epoch=30, batch_size=8, show_metric=True)
+    model.fit(xtraining, yTraining, n_epoch=30,
+              batch_size=10, show_metric=True)
     return model
