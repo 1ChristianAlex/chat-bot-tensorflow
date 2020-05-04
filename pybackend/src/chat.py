@@ -6,11 +6,12 @@ from src.loadJson import getIntents, getStopWords
 import random
 
 
+neuralModel = createNeural()
+wordsProce = WordsProcess()
+jsonIntent = getIntents()
+
+
 def chat(text: str):
-    neuralModel = createNeural()
-    wordsProce = WordsProcess()
-    jsonIntent = getIntents()
-    print("Esse é o bot de teste! Converse com ele")
     bag_usuario = bag_of_words(text, wordsProce.stemmed_words)
     results = neuralModel.predict([bag_usuario])
     if np.max(results) > 0:

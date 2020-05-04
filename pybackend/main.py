@@ -1,5 +1,4 @@
-from src.chat import chat
-from src.server import serverInstance
+from src.flaskServer import app, HOST, PORT
 
-serverInstance.createServer()
-serverInstance.appendFunction('chat-response', chat)
+
+app.run(host=HOST, port=PORT)
