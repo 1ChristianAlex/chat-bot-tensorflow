@@ -1,7 +1,7 @@
-import { Component, OnInit, ViewChild ,ChangeDetectorRef} from '@angular/core';
+import { Component, OnInit, ViewChild, ChangeDetectorRef } from '@angular/core';
 import { isNull } from 'util';
 import { SocketChatService } from '../../../../socket/services/socket-chat.service';
-import { Conversa }  from '../../../model/Conversa';
+import { Conversa } from '../../../model/Conversa';
 import { DomSanitizer } from '@angular/platform-browser';
 
 declare var MediaRecorder: any;
@@ -11,44 +11,44 @@ declare var MediaRecorder: any;
   templateUrl: './modal-chat.component.html',
   styleUrls: ['./modal-chat.component.scss'],
 })
-
 export class ModalChatComponent implements OnInit {
   chunks = [];
   audioFiles = [];
   mensagens: Conversa[] = [];
   valor: string;
-  usuario: boolean = true;
-  mediaRecorder:any;
-  constructor(private Socket: SocketChatService, private dom: DomSanitizer, private cd: ChangeDetectorRef) {}
-
-
+  usuario = true;
+  mediaRecorder: any;
+  constructor(
+    private Socket: SocketChatService,
+    private dom: DomSanitizer,
+    private cd: ChangeDetectorRef
+  ) {}
 
   onSubmit() {
     return this.valor != null ? this.valor : null;
   }
 
-  async preencherMensagem() {
-    const response = await this.Socket.GetResponse();
-
+  async preencherMensagem(response: string) {
     this.mensagens.push({
       mensagem: String(response),
       usuario: false,
       error: false,
-      audio:false
-    })
+      audio: false,
+    });
   }
 
-  enviarDado() {
-
+  async enviarDado() {
     if (this.valor) {
-       this.mensagens.push({
+      this.mensagens.push({
         mensagem: String(this.valor),
         usuario: true,
         error: false,
-        audio:false
-       })      
-      this.Socket.SendMensage(this.valor);
-      this.preencherMensagem();
+        audio: false,
+      });
+      const response = (await this.Socket.SendMensage(this.valor)) as any;
+      console.log(response);
+
+      this.preencherMensagem(response.data);
     } else {
       this.preencherMensagemVazia();
     }
@@ -56,80 +56,81 @@ export class ModalChatComponent implements OnInit {
     this.valor = null;
   }
   ngOnInit(): void {
+    const socket = this.Socket.sendAudio.bind(this.Socket);
     navigator.getUserMedia(
-			{audio: true},
-			stream => {
-				console.log(stream);
-				this.mediaRecorder = new MediaRecorder(stream);
-				this.mediaRecorder.onstop = e => {
-					console.log('data available after MediaRecorder.stop() called.');
+      { audio: true },
+      (stream) => {
+        console.log(stream);
+        this.mediaRecorder = new MediaRecorder(stream);
+        this.mediaRecorder.onstop = (e) => {
+          console.log('data available after MediaRecorder.stop() called.');
 
-					// var clipName = prompt('Enter a name for your sound clip');
+          // var clipName = prompt('Enter a name for your sound clip');
 
-					// var clipContainer = document.createElement('article');
-					// var clipLabel = document.createElement('p');
-					// var audio = document.createElement('audio');
-					// var deleteButton = document.createElement('button');
+          // var clipContainer = document.createElement('article');
+          // var clipLabel = document.createElement('p');
+          // var audio = document.createElement('audio');
+          // var deleteButton = document.createElement('button');
 
-					// clipContainer.classList.add('clip');
-					// audio.setAttribute('controls', '');
-					// deleteButton.innerHTML = 'Delete';
-					// clipLabel.innerHTML = clipName;
+          // clipContainer.classList.add('clip');
+          // audio.setAttribute('controls', '');
+          // deleteButton.innerHTML = 'Delete';
+          // clipLabel.innerHTML = clipName;
 
-					// clipContainer.appendChild(audio);
-					// clipContainer.appendChild(clipLabel);
-					// clipContainer.appendChild(deleteButton);
-					// soundClips.appendChild(clipContainer);
+          // clipContainer.appendChild(audio);
+          // clipContainer.appendChild(clipLabel);
+          // clipContainer.appendChild(deleteButton);
+          // soundClips.appendChild(clipContainer);
 
-					// audio.controls = true;
-					var blob = new Blob(this.chunks, {type: 'audio/ogg; codecs=opus'});
-					this.chunks = [];
-					var audioURL = URL.createObjectURL(blob);
+          // audio.controls = true;
+          const blob = new Blob(this.chunks, {
+            type: 'audio/ogg; codecs=opus',
+          });
+          this.chunks = [];
+          const audioURL = URL.createObjectURL(blob);
           // audio.src = audioURL;
-  
-           this.mensagens.push({
-            mensagem:  this.dom.bypassSecurityTrustUrl(audioURL),
+
+          this.mensagens.push({
+            mensagem: this.dom.bypassSecurityTrustUrl(audioURL),
             usuario: true,
             error: false,
-            audio:true
-           })   
-					this.audioFiles.push(this.dom.bypassSecurityTrustUrl(audioURL));
-					console.log(audioURL);
-					console.log('recorder stopped');
-					this.cd.detectChanges();
-				};
-				this.mediaRecorder.ondataavailable = e => {
-					this.chunks.push(e.data);
-				};
-			},
-			() => {
-				alert('Error capturing audio.');
-			},
-		);
-     
+            audio: true,
+          });
+          this.audioFiles.push(this.dom.bypassSecurityTrustUrl(audioURL));
+          console.log(audioURL);
+          console.log('recorder stopped');
+          this.cd.detectChanges();
+        };
+        this.mediaRecorder.ondataavailable = async (e) => {
+          const data = e.data as Blob;
+          socket(data);
+          this.chunks.push(data);
+        };
+      },
+      () => {
+        alert('Error capturing audio.');
+      }
+    );
   }
 
-
-  preencherMensagemVazia(){
+  preencherMensagemVazia() {
     this.mensagens.push({
-      mensagem: String("Favor Digitar uma Mensagem..."),
-      usuario: false, 
+      mensagem: String('Favor Digitar uma Mensagem...'),
+      usuario: false,
       error: true,
-      audio:false
-    })
+      audio: false,
+    });
   }
 
-  pararAudio(){
+  pararAudio() {
     this.mediaRecorder.stop();
-		console.log(this.mediaRecorder.state);
+    console.log(this.mediaRecorder.state);
     console.log('recorder stopped');
-
   }
 
-  comecarAudio(){
-	  this.mediaRecorder.start();
-		console.log(this.mediaRecorder.state);
-		console.log('recorder started');
+  comecarAudio() {
+    this.mediaRecorder.start();
+    console.log(this.mediaRecorder.state);
+    console.log('recorder started');
   }
 }
-
