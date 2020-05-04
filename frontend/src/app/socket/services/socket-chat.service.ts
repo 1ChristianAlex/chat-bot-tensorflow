@@ -1,32 +1,27 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { connect } from 'socket.io-client';
+
 @Injectable({
   providedIn: 'root',
 })
 export class SocketChatService {
-  constructor(private HttpClient: HttpClient) {}
   private hostname = 'localhost';
   private PORT = 5555;
   private answer: string;
+  private Socket = connect(`http://${this.hostname}:${this.PORT}`);
 
-  public async SendMensage(mensage) {
-    const body = new FormData();
-    body.append('mensage', mensage);
-    const res = await this.HttpClient.post(
-      `http://${this.hostname}:${5555}/mensage`,
-      body
-    ).toPromise();
-    return res;
+  public SendMensage(mensage: string) {
+    this.Socket.emit('chat-mensage', mensage);
   }
-  public sendAudio(audio: Blob) {
-    const body = new FormData();
 
-    body.append('audio', audio);
+  constructor() {}
 
-    this.HttpClient.post(`http://${this.hostname}:${5555}/audio`, body)
-      .toPromise()
-      .then(() => {
-        console.log('audio send');
+  public GetResponse(): Promise<string> {
+    return new Promise((res, rej) => {
+      this.Socket.on('chat-response', (response) => {
+        this.answer = response.response;
+        res(response.response);
       });
+    });
   }
 }

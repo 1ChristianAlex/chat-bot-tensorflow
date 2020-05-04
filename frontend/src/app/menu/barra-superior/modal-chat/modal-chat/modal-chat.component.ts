@@ -28,7 +28,9 @@ export class ModalChatComponent implements OnInit {
     return this.valor != null ? this.valor : null;
   }
 
-  async preencherMensagem(response: string) {
+  async preencherMensagem() {
+    const response = await this.Socket.GetResponse();
+
     this.mensagens.push({
       mensagem: String(response),
       usuario: false,
@@ -37,7 +39,7 @@ export class ModalChatComponent implements OnInit {
     });
   }
 
-  async enviarDado() {
+  enviarDado() {
     if (this.valor) {
       this.mensagens.push({
         mensagem: String(this.valor),
@@ -45,10 +47,8 @@ export class ModalChatComponent implements OnInit {
         error: false,
         audio: false,
       });
-      const response = (await this.Socket.SendMensage(this.valor)) as any;
-      console.log(response);
-
-      this.preencherMensagem(response.data);
+      this.Socket.SendMensage(this.valor);
+      this.preencherMensagem();
     } else {
       this.preencherMensagemVazia();
     }
@@ -56,7 +56,6 @@ export class ModalChatComponent implements OnInit {
     this.valor = null;
   }
   ngOnInit(): void {
-    const socket = this.Socket.sendAudio.bind(this.Socket);
     navigator.getUserMedia(
       { audio: true },
       (stream) => {
@@ -83,11 +82,9 @@ export class ModalChatComponent implements OnInit {
           // soundClips.appendChild(clipContainer);
 
           // audio.controls = true;
-          const blob = new Blob(this.chunks, {
-            type: 'audio/ogg; codecs=opus',
-          });
+          let blob = new Blob(this.chunks, { type: 'audio/ogg; codecs=opus' });
           this.chunks = [];
-          const audioURL = URL.createObjectURL(blob);
+          let audioURL = URL.createObjectURL(blob);
           // audio.src = audioURL;
 
           this.mensagens.push({
@@ -101,10 +98,8 @@ export class ModalChatComponent implements OnInit {
           console.log('recorder stopped');
           this.cd.detectChanges();
         };
-        this.mediaRecorder.ondataavailable = async (e) => {
-          const data = e.data as Blob;
-          socket(data);
-          this.chunks.push(data);
+        this.mediaRecorder.ondataavailable = (e) => {
+          this.chunks.push(e.data);
         };
       },
       () => {
