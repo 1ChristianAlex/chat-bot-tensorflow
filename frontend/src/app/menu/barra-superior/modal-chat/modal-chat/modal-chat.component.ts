@@ -59,7 +59,7 @@ export class ModalChatComponent implements OnInit {
     navigator.getUserMedia(
       { audio: true },
       (stream) => {
-        console.log(stream);
+        const sendAudio = this.Socket.SendAudio.bind(this.Socket);
         this.mediaRecorder = new MediaRecorder(stream);
         this.mediaRecorder.onstop = (e) => {
           console.log('data available after MediaRecorder.stop() called.');
@@ -82,9 +82,12 @@ export class ModalChatComponent implements OnInit {
           // soundClips.appendChild(clipContainer);
 
           // audio.controls = true;
-          let blob = new Blob(this.chunks, { type: 'audio/ogg; codecs=opus' });
+          const blob = new Blob(this.chunks, {
+            type: 'audio/ogg; codecs=opus',
+          });
+          sendAudio(blob);
           this.chunks = [];
-          let audioURL = URL.createObjectURL(blob);
+          const audioURL = URL.createObjectURL(blob);
           // audio.src = audioURL;
 
           this.mensagens.push({

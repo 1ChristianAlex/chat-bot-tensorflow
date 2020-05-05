@@ -2,6 +2,7 @@ import express from 'express';
 import server from 'http';
 import io from 'socket.io';
 import { Chat } from './chat';
+import { writeBlob } from '../classes/saveAudio';
 
 const hostname = 'localhost';
 const PORT = 5555;
@@ -19,6 +20,10 @@ const runServer = () => {
       const chatResponse = await Chat(data);
       console.log(data);
       socket.emit('chat-response', { response: chatResponse });
+    });
+
+    socket.on('chat-audio', async (data: ArrayBuffer) => {
+      writeBlob(data);
     });
   });
   http.listen(PORT, hostname, () => {

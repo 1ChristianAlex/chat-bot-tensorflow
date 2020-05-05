@@ -5,8 +5,6 @@ from pydub import AudioSegment
 
 def stringToAudio(blob: bytes):
     # s = io.BytesIO(blob)
-    # audio = AudioSegment.from_raw(
-    #     s, sample_width, frame_rate, channels).export(filename, format='wav')
 
     with open('myfile.wav', mode='bx') as f:
         f.write(blob)

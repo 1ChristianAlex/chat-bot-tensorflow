@@ -13,6 +13,9 @@ export class SocketChatService {
   public SendMensage(mensage: string) {
     this.Socket.emit('chat-mensage', mensage);
   }
+  public async SendAudio(audio: Blob) {
+    this.Socket.emit('chat-audio', await audio.arrayBuffer());
+  }
 
   constructor() {}
 

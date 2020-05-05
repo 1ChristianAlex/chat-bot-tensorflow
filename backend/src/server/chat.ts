@@ -4,10 +4,9 @@ import { tensor2d, Tensor, tensor } from '@tensorflow/tfjs';
 const tfl = new tfLearn();
 const Chat = async (mensageInput: string) => {
   return new Promise(async (res, rej) => {
-    const model = await tfl.createNeural();
     const bagInput = clientBagWords(mensageInput, tfl.stemmed);
-    console.log(tfl.stemmed.length);
 
+    const model = await tfl.createNeural();
     const tensorToPreditc = tensor2d(bagInput, [
       bagInput.length,
       bagInput[0].length,
