@@ -15,7 +15,7 @@ def postMensage():
 
 @app.route("/audio", methods=['POST'])
 def postAudio():
-    audio = request.files['audio']
+    audio = request.files['audio'].read()
     audioSpeach = stringToAudio(audio)
     textRes = chat(audioSpeach)
     return json.dumps({'data': 'textRes'})

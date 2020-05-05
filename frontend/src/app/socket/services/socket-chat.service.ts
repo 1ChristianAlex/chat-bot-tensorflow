@@ -18,7 +18,7 @@ export class SocketChatService {
     ).toPromise();
     return res;
   }
-  public sendAudio(audio: Blob) {
+  public async sendAudio(audio: Blob) {
     const body = new FormData();
 
     body.append('audio', audio);
