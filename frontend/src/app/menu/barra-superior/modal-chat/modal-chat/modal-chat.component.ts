@@ -60,8 +60,13 @@ export class ModalChatComponent implements OnInit {
       { audio: true },
       (stream) => {
         const sendAudio = this.Socket.SendAudio.bind(this.Socket);
-        this.mediaRecorder = new MediaRecorder(stream);
-        this.mediaRecorder.onstop = (e) => {
+
+        const options = {
+          audioBitsPerSecond: 48000,
+          mimeType: 'audio/webm; codecs=opus',
+        };
+        this.mediaRecorder = new MediaRecorder(stream, options);
+        this.mediaRecorder.onstop = async (e) => {
           console.log('data available after MediaRecorder.stop() called.');
 
           // var clipName = prompt('Enter a name for your sound clip');
@@ -82,10 +87,16 @@ export class ModalChatComponent implements OnInit {
           // soundClips.appendChild(clipContainer);
 
           // audio.controls = true;
+
+          // const blob = new Blob(this.chunks, {
+          //   type: 'audio/wav',
+          // });
+
           const blob = new Blob(this.chunks, {
-            type: 'audio/ogg; codecs=opus',
+            type: 'audio/webm; codecs=opus',
           });
-          sendAudio(blob);
+          sendAudio(await blob.arrayBuffer());
+
           this.chunks = [];
           const audioURL = URL.createObjectURL(blob);
           // audio.src = audioURL;
@@ -97,7 +108,6 @@ export class ModalChatComponent implements OnInit {
             audio: true,
           });
           this.audioFiles.push(this.dom.bypassSecurityTrustUrl(audioURL));
-          console.log(audioURL);
           console.log('recorder stopped');
           this.cd.detectChanges();
         };
