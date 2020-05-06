@@ -2,3 +2,5 @@ node_modules
 build
 dist
 audios
+src/config/*.json
+src/config/.env

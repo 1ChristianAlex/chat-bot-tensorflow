@@ -1,8 +1,9 @@
+import '../config/dotenv';
 import express from 'express';
 import server from 'http';
 import io from 'socket.io';
 import { Chat } from './chat';
-import { writeBlob } from '../classes/saveAudio';
+import { writeBlob, googleSpeech } from '../classes';
 
 const hostname = 'localhost';
 const PORT = 5555;
@@ -23,7 +24,10 @@ const runServer = () => {
     });
 
     socket.on('chat-audio', async (data: ArrayBuffer) => {
-      writeBlob(data);
+      const audioPath = await writeBlob(data);
+      const google = new googleSpeech();
+      const transcribe = await google.audioText(audioPath);
+      socket.emit('chat-response', { response: transcribe });
     });
   });
   http.listen(PORT, hostname, () => {
