@@ -21,14 +21,5 @@ def postAudioStart():
     return json.dumps({'data': chat(audioSpeach), 'pergunta': audioSpeach})
 
 
-# @app.route("/audio", methods=['POST'])
-# def postAudio():
-
-#     audio = request.files['audio'].read()
-#     audioSpeach = stringToAudio(audio)
-#     textRes = chat(audioSpeach)
-#     return json.dumps({'data': 'textRes'})
-
-
 HOST = 'localhost'
 PORT = 5555

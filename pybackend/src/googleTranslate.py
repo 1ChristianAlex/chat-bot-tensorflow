@@ -1,7 +1,6 @@
 from googletrans import Translator
 import io
 import speech_recognition as sr
-from pydub import AudioSegment
 import wave
 
 

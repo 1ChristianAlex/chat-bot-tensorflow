@@ -275,26 +275,39 @@
     },
     {
       "tag": "sabores-pedido",
-      "patterns": ["Chocolate", "Morango", "Creme", "Flocos"],
+      "patterns": [
+        "Sorverte Chocolate",
+        "Sorverte Morango",
+        "Sorverte Creme",
+        "Sorverte Flocos",
+        "Escolho Chocolate",
+        "Quero Chocolate",
+        "Escolho Morango",
+        "Quero Morango",
+        "Escolho Creme",
+        "Quero Creme",
+        "Escolho Floco",
+        "Quero Floco"
+      ],
       "responses": [
-        "Chocolate é muito bom! Agora que já sei o sabor, qual o tamanho do pote que gostaria de adquirir? Pequeno, médio ou grande?",
-        "Hmmm chocolate :) Agora me informe o tamanho do pote desejado, pequeno, médio ou grande?",
-        "CHOCOLATE É O MEU FAVORITO!!! Você tem bom gosto. Me fala também o tamanho do pote que você quer, pequeno, médio ou grande?",
-        "Morango é muito bom! Agora que já sei o sabor, qual o tamanho do pote que gostaria de adquirir? Pequeno, médio ou grande?",
-        "Hmmm Morango :) Agora me informe o tamanho do pote desejado, pequeno, médio ou grande?",
-        "MORANGO É O MEU FAVORITO!!! Você tem bom gosto. Me fala também o tamanho do pote que você quer, pequeno, médio ou grande?",
-        "Creme é muito bom! Agora que já sei o sabor, qual o tamanho do pote que gostaria de adquirir? Pequeno, médio ou grande?",
-        "Hmmm Creme :) Agora me informe o tamanho do pote desejado, pequeno, médio ou grande?",
-        "CREME É O MEU FAVORITO!!! Você tem bom gosto. Me fala também o tamanho do pote que você quer, pequeno, médio ou grande?",
+        "Agora que já sei o sabor, qual o tamanho do pote que gostaria de adquirir? Pequeno, médio ou grande?",
+        "Agora me informe o tamanho do pote desejado, pequeno, médio ou grande?",
+        "Você tem bom gosto. Me fala também o tamanho do pote que você quer, pequeno, médio ou grande?",
+        "Agora que já sei o sabor, qual o tamanho do pote que gostaria de adquirir? Pequeno, médio ou grande?",
+        "Agora me informe o tamanho do pote desejado, pequeno, médio ou grande?",
+        "Você tem bom gosto. Me fala também o tamanho do pote que você quer, pequeno, médio ou grande?",
+        " Agora que já sei o sabor, qual o tamanho do pote que gostaria de adquirir? Pequeno, médio ou grande?",
+        "Agora me informe o tamanho do pote desejado, pequeno, médio ou grande?",
+        "Você tem bom gosto. Me fala também o tamanho do pote que você quer, pequeno, médio ou grande?",
         "Flocos é muito bom! Agora que já sei o sabor, qual o tamanho do pote que gostaria de adquirir? Pequeno, médio ou grande?",
-        "Hmmm Flocos :) Agora me informe o tamanho do pote desejado, pequeno, médio ou grande?",
-        "FLOCOS É O MEU FAVORITO!!! Você tem bom gosto. Me fala também o tamanho do pote que você quer, pequeno, médio ou grande?"
+        "Agora me informe o tamanho do pote desejado, pequeno, médio ou grande?",
+        "Você tem bom gosto. Me fala também o tamanho do pote que você quer, pequeno, médio ou grande?"
       ],
       "context_set": ""
     },
     {
       "tag": "tamanho-confirmacao",
-      "patterns": ["Pequeno", "Médio", "Grande"],
+      "patterns": ["Tamanho Pequeno", "Tamanho Médio", "Tamanho Grande"],
       "responses": [
         "Pequeno no tamanho, GIGANTE no sabor! Seu sorvete já está sendo preparado para o envio, enquanto isso, me informe o método de pagamento desejado.",
         "Potes na média certa :) Seu sorvete já está sendo preparado para o envio, enquanto isso, me informe o método de pagamento desejado.",
@@ -305,11 +318,11 @@
     {
       "tag": "metodo-pagamento",
       "patterns": [
-        "Dinheiro",
-        "Cartão de Crédito",
-        "Crédito",
-        "Cartão de Débito",
-        "Debito"
+        "Pagar no Dinheiro",
+        "Pagar Cartão de Crédito",
+        "Pagar Crédito",
+        "Pagar Cartão de Débito",
+        "Pagar Debito"
       ],
       "responses": [
         "Método de pagamento confirmado, seu pedido está pronto para ser enviado, para isso basta digitar ENVIAR, e logo logo seu sorvete estará aí.",
@@ -320,7 +333,13 @@
     },
     {
       "tag": "envio-aguardo",
-      "patterns": ["Enviar", "Pode enviar", "Mandar", "Entregar"],
+      "patterns": [
+        "pode Enviar o pedido",
+        "me envie",
+        "mande para mim",
+        "entregue na minha casa",
+        "Entregue no meu apartarmento"
+      ],
       "responses": [
         "Ótimo, nosso entregador está a caminho! Basta aguardar e em alguns instantes ele estará aí.",
         "Ótimo! Em breve seu produto estará aí, basta aguardar alguns minutos.",
