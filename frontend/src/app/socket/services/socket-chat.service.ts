@@ -29,4 +29,15 @@ export class SocketChatService {
         console.log('audio send');
       });
   }
+  public async startAudioBack() {
+    const body = new FormData();
+    body.append('mensage', JSON.stringify({ audio: true }));
+    return new Promise((res, rej) => {
+      this.HttpClient.post(`http://${this.hostname}:${5555}/start-audio`, body)
+        .toPromise()
+        .then((resolve) => {
+          res(resolve);
+        });
+    });
+  }
 }
