@@ -1,6 +1,6 @@
 nltk==3.5
 tflearn==0.3.2
-tensorflow==1.14
+tensorflow==1.15.2
 SpeechRecognition==3.8.1
 gTTS==2.1.1
 googletrans==2.4.0
