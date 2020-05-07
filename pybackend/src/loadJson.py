@@ -1,16 +1,20 @@
 import json as js
 import io
+import os
+
+dir = os.path.dirname(__file__)
+intents = os.path.join(dir, 'data/intents-servete.json')
 
 
 def getIntents():
-    with io.open("F:/Projetos/chatbot-node/pybackend/src/data/intents-servete.json", mode="r", encoding="utf-8") as file:
+    with io.open(intents, mode="r", encoding="utf-8") as file:
 
         data = js.load(file)
         return data
 
 
 def getStopWords():
-    with io.open("F:/Projetos/chatbot-node/pybackend/src/data/intents-servete.json", mode="r", encoding="utf-8") as file:
+    with io.open(intents, mode="r", encoding="utf-8") as file:
 
         data = js.load(file)
         return data
