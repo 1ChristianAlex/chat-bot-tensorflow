@@ -3,4 +3,3 @@ build
 dist
 package-lock.json
 yarn.lock
-pybackend/src/__pycache__/*
