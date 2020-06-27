@@ -35,11 +35,14 @@ export class SocketChatService {
 
     imagem.append('imagem', image);
 
-    this.HttpClient.post(`http://${this.hostname}:${5555}/image`, imagem)
-    .toPromise()
-    .then(() => {
-      console.log('imag send');
-    });
+    return new Promise((res,rej) => {
+      this.HttpClient.post(`http://${this.hostname}:${5555}/image`, imagem)
+      .toPromise()
+      .then((resolve) => {
+        res(resolve)
+      });
+    }); 
+    
    }
 
   public async startAudioBack() {

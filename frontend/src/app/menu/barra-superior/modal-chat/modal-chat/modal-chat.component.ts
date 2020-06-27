@@ -30,7 +30,6 @@ export class ModalChatComponent implements OnInit {
   }
   selectedFile: File
 
-<<<<<<< HEAD
   async onFileChanged(event) {
 
     this.selectedFile = event.target.files[0];
@@ -40,21 +39,21 @@ export class ModalChatComponent implements OnInit {
   }
   async enviarImagem(imagem: File) {
 
-    this.mensagens.push({
-      mensagem: "Arquivo enviado com sucesso", 
-      usuario: true, 
-      audio: false,
-      error: false,
-      imagem:true
-    }); 
-    const response = (await this.Socket.sendImage(imagem))
+    this.Socket.sendImage(imagem).then((res: any) => {
+      this.mensagens.push({
+        mensagem: String(res.pergunta),
+        usuario: true,
+        error: false,
+        audio: false,
+        imagem:false
+      });
+      this.preencherMensagem(res.data);
+    });
     
 
   }
-  async preencherMensagem(response: string) {
-=======
+
   async preencherMensagem(response) {
->>>>>>> dbe38e14a2c362456e0ccd4e5d479d8231ad7509
     this.mensagens.push({
       mensagem: String(response),
       usuario: false,
@@ -93,33 +92,6 @@ export class ModalChatComponent implements OnInit {
         this.mediaRecorder = new MediaRecorder(stream, options);
         this.mediaRecorder.onstop = async (e) => {
           console.log('data available after MediaRecorder.stop() called.');
-<<<<<<< HEAD
-=======
-
-          // var clipName = prompt('Enter a name for your sound clip');
-
-          // var clipContainer = document.createElement('article');
-          // var clipLabel = document.createElement('p');
-          // var audio = document.createElement('audio');
-          // var deleteButton = document.createElement('button');
-
-          // clipContainer.classList.add('clip');
-          // audio.setAttribute('controls', '');
-          // deleteButton.innerHTML = 'Delete';
-          // clipLabel.innerHTML = clipName;
-
-          // clipContainer.appendChild(audio);
-          // clipContainer.appendChild(clipLabel);
-          // clipContainer.appendChild(deleteButton);
-          // soundClips.appendChild(clipContainer);
-
-          // audio.controls = true;
-
-          // const blob = new Blob(this.chunks, {
-          //   type: 'audio/wav',
-          // });
-
->>>>>>> dbe38e14a2c362456e0ccd4e5d479d8231ad7509
           const blob = new Blob(this.chunks, {
             type: 'audio/webm; codecs=opus',
           });
@@ -178,6 +150,7 @@ export class ModalChatComponent implements OnInit {
         usuario: true,
         error: false,
         audio: false,
+        imagem:false
       });
       this.preencherMensagem(res.data);
     });
