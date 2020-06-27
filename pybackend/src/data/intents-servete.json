@@ -4,9 +4,9 @@
       "tag": "boas-vindas",
       "patterns": [
         "Oi",
-        "Como você está?",
-        "Tem alguém ai?",
-        "Olá",
+        "Como voc\u00ea est\u00e1?",
+        "Tem algu\u00e9m ai?",
+        "Ol\u00e1",
         "Bom dia",
         "Boa tarde",
         "Boa noite",
@@ -21,18 +21,19 @@
         "Oiii"
       ],
       "responses": [
-        "Olá! Eu sou Nino, seu garçom! O que você deseja?",
-        "Olá! Eu sou Nino, seu garçom! Como posso ajudá-lo?",
-        "Olá! Eu sou Nino, seu garçom! Há algo em que eu possa ser útil?",
-        "Sou o Garçom Nino! Bom te ver por aqui! Como posso te ajudar?",
-        "Sou o Garçom Nino! Bom te ver por aqui! O que você deseja?",
-        "Sou o Garçom Nino! É um prazer recebê-lo! Como posso te ajudar?",
-        "Sou o Garçom Nino! É um prazer recebê-lo! Como posso ser útil?",
-        "Oi! Meu nome é Nino, como posso ajudar você?",
-        "Oi! Meu nome é Nino, e estou aqui para ajudá-lo, basta você me dizer como.",
-        "Oi! Meu nome é Nino, e estou sempre a disposição, basta me dizer como posso ser hútil."
+        "Ol\u00e1! Eu sou Nino, seu gar\u00e7om! O que voc\u00ea deseja?",
+        "Ol\u00e1! Eu sou Nino, seu gar\u00e7om! Como posso ajud\u00e1-lo?",
+        "Ol\u00e1! Eu sou Nino, seu gar\u00e7om! H\u00e1 algo em que eu possa ser \u00fatil?",
+        "Sou o Gar\u00e7om Nino! Bom te ver por aqui! Como posso te ajudar?",
+        "Sou o Gar\u00e7om Nino! Bom te ver por aqui! O que voc\u00ea deseja?",
+        "Sou o Gar\u00e7om Nino! \u00c9 um prazer receb\u00ea-lo! Como posso te ajudar?",
+        "Sou o Gar\u00e7om Nino! \u00c9 um prazer receb\u00ea-lo! Como posso ser \u00fatil?",
+        "Oi! Meu nome \u00e9 Nino, como posso ajudar voc\u00ea?",
+        "Oi! Meu nome \u00e9 Nino, e estou aqui para ajud\u00e1-lo, basta voc\u00ea me dizer como.",
+        "Oi! Meu nome \u00e9 Nino, e estou sempre a disposi\u00e7\u00e3o, basta me dizer como posso ser h\u00fatil."
       ],
-      "context_set": ""
+      "context_set": "",
+      "lifecycle": "2020-06-27"
     },
     {
       "tag": "ate-mais",
@@ -40,16 +41,16 @@
         "Tchau",
         "Tchau Nino",
         "Tchauzinho",
-        "Até mais",
-        "Até mais Nino",
-        "Até Logo",
-        "Até Logo Nino",
-        "Até depois",
-        "Até outra hora",
+        "At\u00e9 mais",
+        "At\u00e9 mais Nino",
+        "At\u00e9 Logo",
+        "At\u00e9 Logo Nino",
+        "At\u00e9 depois",
+        "At\u00e9 outra hora",
         "Flw",
         "Flw Nino",
-        "Era só isso",
-        "Era só isso mesmo",
+        "Era s\u00f3 isso",
+        "Era s\u00f3 isso mesmo",
         "Tudo bem, Obrigado",
         "Td bem, obrigado",
         "Td bem, obrg",
@@ -61,121 +62,126 @@
         "Tenha um bom dia",
         "Adeus",
         "Bye",
-        "Abraços",
+        "Abra\u00e7os",
         "Beijos",
         "Beijo",
         "Bj"
       ],
       "responses": [
-        "Até logo!",
-        "Até depois.",
+        "At\u00e9 logo!",
+        "At\u00e9 depois.",
         "Tchauzinho :)",
-        "Que pena :( Até Logo!",
-        "Espero revêlo em Breve!",
-        "Tenha um ótimo dia, até logo!",
-        "A gente se fala em breve né? Tchau!",
+        "Que pena :( At\u00e9 Logo!",
+        "Espero rev\u00ealo em Breve!",
+        "Tenha um \u00f3timo dia, at\u00e9 logo!",
+        "A gente se fala em breve n\u00e9? Tchau!",
         "Tchauzinho!!!",
-        "Espero ter ajudado você. Até logo!",
+        "Espero ter ajudado voc\u00ea. At\u00e9 logo!",
         "Se ainda precisar de algo basta me chamar!",
-        "Não se preocupe, qualquer coisa é só me chamar.",
-        "Qualquer dúvida é só me chamar, estou sempre a sua disposição."
+        "N\u00e3o se preocupe, qualquer coisa \u00e9 s\u00f3 me chamar.",
+        "Qualquer d\u00favida \u00e9 s\u00f3 me chamar, estou sempre a sua disposi\u00e7\u00e3o."
       ],
-      "context_set": ""
+      "context_set": "",
+      "lifecycle": "2020-06-27"
     },
     {
       "tag": "nome",
       "patterns": [
         "Nome?",
-        "Qual é o seu nome?",
+        "Qual \u00e9 o seu nome?",
         "Qual seu nome?",
-        "Como você se chama?",
+        "Como voc\u00ea se chama?",
         "Como vc se chama?",
         "Como se chama?",
-        "Você tem nome?",
+        "Voc\u00ea tem nome?",
         "Como devo te chamar?",
-        "Como devo chamâ-lo?",
+        "Como devo cham\u00e2-lo?",
         "Seu nome?",
-        "Seu nome é?"
+        "Seu nome \u00e9?"
       ],
       "responses": [
         "Me chamo Nino!",
-        "Me chamo Nino, e estou aqui para ajudá-lo!",
-        "Me chamo Nino, é um prazer conhecê-lo",
+        "Me chamo Nino, e estou aqui para ajud\u00e1-lo!",
+        "Me chamo Nino, \u00e9 um prazer conhec\u00ea-lo",
         "Eu sou o Nino!",
-        "Eu sou o Nino, é muito bom ter você aqui!",
+        "Eu sou o Nino, \u00e9 muito bom ter voc\u00ea aqui!",
         "Eu sou o Nino, como posso ajudar?",
-        "Meu nome é Nino. Como vai?",
-        "Meu nome é Nino, e estou aqui para ajudar você!",
-        "Meu nome é Nino, o que posso fazer por você?",
-        "Você pode me chamar de Nino, eu estou aqui para ajudar você",
-        "Você pode me chamar de Nino, como posso ajudar você?"
+        "Meu nome \u00e9 Nino. Como vai?",
+        "Meu nome \u00e9 Nino, e estou aqui para ajudar voc\u00ea!",
+        "Meu nome \u00e9 Nino, o que posso fazer por voc\u00ea?",
+        "Voc\u00ea pode me chamar de Nino, eu estou aqui para ajudar voc\u00ea",
+        "Voc\u00ea pode me chamar de Nino, como posso ajudar voc\u00ea?"
       ],
-      "context_set": ""
+      "context_set": "",
+      "lifecycle": "2020-06-27"
     },
     {
       "tag": "loja",
       "patterns": [
-        "É da sorveteria?",
+        "\u00c9 da sorveteria?",
         "Esse chat e da sorveteria?",
-        "Você trabalha na sorveteria?",
+        "Voc\u00ea trabalha na sorveteria?",
         "Sorveteria?",
-        "Gostaria de falar com alguém da sorveteria",
-        "Como falo com alguém da sorveteria?",
-        "Qual é o telefone da sorveteria?"
+        "Gostaria de falar com algu\u00e9m da sorveteria",
+        "Como falo com algu\u00e9m da sorveteria?",
+        "Qual \u00e9 o telefone da sorveteria?"
       ],
       "responses": [
         "Sim, eu sou o assistente virtual da Sorveteria Cremosinhos. Posso ajudar?",
-        "Sim, aqui é da Sorveteria Cremosinhos, como posso ajudá-lo?",
-        "Sim, esse é o atendimento virtual da Sorveteria Cremosinhos, como posso ajudá-lo?",
+        "Sim, aqui \u00e9 da Sorveteria Cremosinhos, como posso ajud\u00e1-lo?",
+        "Sim, esse \u00e9 o atendimento virtual da Sorveteria Cremosinhos, como posso ajud\u00e1-lo?",
         "Isso, Sorveteria Cremosinhos ao seu dispor, como posso ajudar?",
-        "Isso, Sorveteria Cremosinhos ao seu dispor, o que posso fazer por você?",
+        "Isso, Sorveteria Cremosinhos ao seu dispor, o que posso fazer por voc\u00ea?",
         "Isso, Sorveteria Cremosinhos ao seu dispor, gostaria de realizar um pedido?",
-        "Nosso contato telefônico é (99) 9 9999 - 9999, e esse também é nosso whatsapp, mas eu também posso te auxiliar com suas dúvidas se preferir."
+        "Nosso contato telef\u00f4nico \u00e9 (99) 9 9999 - 9999, e esse tamb\u00e9m \u00e9 nosso whatsapp, mas eu tamb\u00e9m posso te auxiliar com suas d\u00favidas se preferir."
       ],
-      "context_set": ""
+      "context_set": "",
+      "lifecycle": "2020-06-27"
     },
     {
       "tag": "funcionamento-aberto",
       "patterns": [
-        "Vocês estão abertos até que horas?",
-        "Até que horas fica aberto?",
-        "Fica aberto até que horas?",
-        "Vocês estão abertos hoje?",
-        "Estão abertos?",
-        "Está aberto?",
-        "Tá aberto?"
+        "Voc\u00eas est\u00e3o abertos at\u00e9 que horas?",
+        "At\u00e9 que horas fica aberto?",
+        "Fica aberto at\u00e9 que horas?",
+        "Voc\u00eas est\u00e3o abertos hoje?",
+        "Est\u00e3o abertos?",
+        "Est\u00e1 aberto?",
+        "T\u00e1 aberto?"
       ],
       "responses": [
-        "Sim! Estamos a sua disposição, como podemos ajudar?",
+        "Sim! Estamos a sua disposi\u00e7\u00e3o, como podemos ajudar?",
         "Sim, estamos abertos neste momento. Gostaria de realizar um pedido?",
-        "Estamos abertos para servir você! Como posso ajudar?",
+        "Estamos abertos para servir voc\u00ea! Como posso ajudar?",
         "Estamos abertos neste momento, posso anotar seu pedido?",
         "Estamos abertos, gostaria de realizar um pedido?",
         "Estamos abertos para matar sua vontade de sorvete! Qual o seu pedido?",
-        "Sim! Estamos abertos e levamos seu pedido até você, ou aguardamos a sua visita em nossa loja :)"
+        "Sim! Estamos abertos e levamos seu pedido at\u00e9 voc\u00ea, ou aguardamos a sua visita em nossa loja :)"
       ],
-      "context_set": ""
+      "context_set": "",
+      "lifecycle": "2020-06-27"
     },
     {
       "tag": "funcionamento-fechado",
       "patterns": [
-        "Vocês estão fechados?",
-        "Já fechou?",
+        "Voc\u00eas est\u00e3o fechados?",
+        "J\u00e1 fechou?",
         "Que horas fecha?",
         "Fecha que horas?",
-        "Já fecharam?",
-        "Já fechou?",
-        "Estão fechados?",
-        "Está fechado?",
-        "Tá fechado?"
+        "J\u00e1 fecharam?",
+        "J\u00e1 fechou?",
+        "Est\u00e3o fechados?",
+        "Est\u00e1 fechado?",
+        "T\u00e1 fechado?"
       ],
       "responses": [
-        "Lamentamos, mas estamos fechados. Nosso horário de atendimento é das 09:00 às 19:00 de Segunda a Sexta, e de 12:00 às 20:00 aos Sábados, Domingos e Feriados",
-        "Neste momentos estamos fechados. Mas você pode entrar em contato das 09:00 às 19:00 de Segunda a Sexta, e de 12:00 às 20:00 aos Sábados, Domingos e Feriados. Será um prazer atendê-lo",
-        "Nossa loja está fechada neste momento. Nosso horário de atendimento é das 09:00 às 19:00 de Segunda a Sexta, e de 12:00 às 20:00 aos Sábados, Domingos e Feriados",
-        "Ainda não estamos abertos, aguarde só mais um pouco. Lembre-se, nosso horário de atendimento é das 09:00 às 19:00 de Segunda a Sexta, e de 12:00 às 20:00 aos Sábados, Domingos e Feriados. Até logo :)"
+        "Lamentamos, mas estamos fechados. Nosso hor\u00e1rio de atendimento \u00e9 das 09:00 \u00e0s 19:00 de Segunda a Sexta, e de 12:00 \u00e0s 20:00 aos S\u00e1bados, Domingos e Feriados",
+        "Neste momentos estamos fechados. Mas voc\u00ea pode entrar em contato das 09:00 \u00e0s 19:00 de Segunda a Sexta, e de 12:00 \u00e0s 20:00 aos S\u00e1bados, Domingos e Feriados. Ser\u00e1 um prazer atend\u00ea-lo",
+        "Nossa loja est\u00e1 fechada neste momento. Nosso hor\u00e1rio de atendimento \u00e9 das 09:00 \u00e0s 19:00 de Segunda a Sexta, e de 12:00 \u00e0s 20:00 aos S\u00e1bados, Domingos e Feriados",
+        "Ainda n\u00e3o estamos abertos, aguarde s\u00f3 mais um pouco. Lembre-se, nosso hor\u00e1rio de atendimento \u00e9 das 09:00 \u00e0s 19:00 de Segunda a Sexta, e de 12:00 \u00e0s 20:00 aos S\u00e1bados, Domingos e Feriados. At\u00e9 logo :)"
       ],
-      "context_set": ""
+      "context_set": "",
+      "lifecycle": "2020-06-27"
     },
     {
       "tag": "pedido",
@@ -184,7 +190,7 @@
         "Gostaria de realizar um pedido",
         "Gostaria de pedir",
         "Gostaria de pedir sorvete",
-        "Você pode anotar meu pedido?",
+        "Voc\u00ea pode anotar meu pedido?",
         "Vc pode anotar meu pedido?",
         "pode anotar meu pedido?",
         "Posso fazer o pedido?",
@@ -193,15 +199,16 @@
         "Gostaria de pedir sorvete"
       ],
       "responses": [
-        "Claro! Se você já conhece a loja me informe o sabor, tamanho, e quantidade de potes desejados. Caso não conheça, posso te enviar nosso cardápio com tabela de valores?",
-        "Claro! Caso não conheça nossos produtos, podemos informa-lo sobre nossos sabores e valores disponíveis.",
-        "Para pedir basta digitar o sabor desejado, tamanho e quantidade de potes desejados e poderemos continuar. Caso não conheça nossos produtos eu posso enviar um cardápio com nossa tabela de valores para você.",
+        "Claro! Se voc\u00ea j\u00e1 conhece a loja me informe o sabor, tamanho, e quantidade de potes desejados. Caso n\u00e3o conhe\u00e7a, posso te enviar nosso card\u00e1pio com tabela de valores?",
+        "Claro! Caso n\u00e3o conhe\u00e7a nossos produtos, podemos informa-lo sobre nossos sabores e valores dispon\u00edveis.",
+        "Para pedir basta digitar o sabor desejado, tamanho e quantidade de potes desejados e poderemos continuar. Caso n\u00e3o conhe\u00e7a nossos produtos eu posso enviar um card\u00e1pio com nossa tabela de valores para voc\u00ea.",
         "Vou anotar seu pedido, me diga o sabor, o tamanho e a quantidade de potes desejados.",
-        "Você já conhece nossos produtos? Se sim me informe o seu pedido, caso contrário eu posso enviar para você nosso cardápio com nossa tabela de valores.",
-        "Para satisfazer sua vontade de sorvete temos os sabores, chocolate, morango, creme e flocos, com potes de tamanhos pequeno, médio e grande apronta entrega. Qual será o seu pedido?",
-        "Nossos sorvetes estão prontos para serem levados até você, nos sabores chocolate, morango, creme e flocos, com potes pequenos, médioe e grandes. Qual será o seu pedido?"
+        "Voc\u00ea j\u00e1 conhece nossos produtos? Se sim me informe o seu pedido, caso contr\u00e1rio eu posso enviar para voc\u00ea nosso card\u00e1pio com nossa tabela de valores.",
+        "Para satisfazer sua vontade de sorvete temos os sabores, chocolate, morango, creme e flocos, com potes de tamanhos pequeno, m\u00e9dio e grande apronta entrega. Qual ser\u00e1 o seu pedido?",
+        "Nossos sorvetes est\u00e3o prontos para serem levados at\u00e9 voc\u00ea, nos sabores chocolate, morango, creme e flocos, com potes pequenos, m\u00e9dioe e grandes. Qual ser\u00e1 o seu pedido?"
       ],
-      "context_set": ""
+      "context_set": "",
+      "lifecycle": "2020-06-27"
     },
     {
       "tag": "endereco",
@@ -218,15 +225,16 @@
         "Certinho"
       ],
       "responses": [
-        "Ótimo, agora me informe seu endereço para que possamos enviar o seu pedido.",
-        "Ótimo, vamos enviar seu pedido, para isso nos informe o seu endereço.",
-        "Ótimo, logo logo você estará com seu pedido em mãos, mas para isso nos informe seu endereço e enviaremos seu sorvete o quanto antes",
-        "Muito bem, me informe seu endereço e em instantes você receberá o seu pedido",
-        "Muito bem, agora me informe seu endereço para que possamos enviar o seu pedido o mais rápido possível.",
-        "Isso aí, sorvete é muito bom, e em instantes você estará se deliciando com o seu pedido, mas antes me informe o seu endereço para que possamos realizar a entrega do seu produto.",
-        "Entendido, nossos entregadores já estão a postos para entregar seu pedido, mas para isso informe o seu endereço e logo você estará com seu sorvete em mãos."
+        "\u00d3timo, agora me informe seu endere\u00e7o para que possamos enviar o seu pedido.",
+        "\u00d3timo, vamos enviar seu pedido, para isso nos informe o seu endere\u00e7o.",
+        "\u00d3timo, logo logo voc\u00ea estar\u00e1 com seu pedido em m\u00e3os, mas para isso nos informe seu endere\u00e7o e enviaremos seu sorvete o quanto antes",
+        "Muito bem, me informe seu endere\u00e7o e em instantes voc\u00ea receber\u00e1 o seu pedido",
+        "Muito bem, agora me informe seu endere\u00e7o para que possamos enviar o seu pedido o mais r\u00e1pido poss\u00edvel.",
+        "Isso a\u00ed, sorvete \u00e9 muito bom, e em instantes voc\u00ea estar\u00e1 se deliciando com o seu pedido, mas antes me informe o seu endere\u00e7o para que possamos realizar a entrega do seu produto.",
+        "Entendido, nossos entregadores j\u00e1 est\u00e3o a postos para entregar seu pedido, mas para isso informe o seu endere\u00e7o e logo voc\u00ea estar\u00e1 com seu sorvete em m\u00e3os."
       ],
-      "context_set": ""
+      "context_set": "",
+      "lifecycle": "2020-06-27"
     },
     {
       "tag": "valores",
@@ -236,42 +244,89 @@
         "Qual o valor?",
         "Quanto custa?",
         "Valores?",
-        "Qual o preço?",
-        "preço",
+        "Qual o pre\u00e7o?",
+        "pre\u00e7o",
         "Poderia me informar o valor do sorvete?",
         "gostaria de saber o valor do sorvete",
         "valor do sorvete",
         "valor"
       ],
       "responses": [
-        "Nossos sorvetes estão disponíveis em três tamanhos, sendo eles: Pequeno - R$6,99, Médio - R$9,99 e Grande - 12,99. Posso anotar seu pedido?",
-        "Possuímos três tamanhos de potes diferentes com valores: Pequeno - R$6,99, Médio - R$9,99 e Grande - 12,99. Gostaria de realizar um pedido?",
-        "Nossos potes possuem três tamanhos com os respectivos valores: Pequeno - R$6,99, Médio - R$9,99 e Grande - 12,99. Podemos anotar o seu pedido?"
+        "Nossos sorvetes est\u00e3o dispon\u00edveis em tr\u00eas tamanhos, sendo eles: Pequeno - R$6,99, M\u00e9dio - R$9,99 e Grande - 12,99. Posso anotar seu pedido?",
+        "Possu\u00edmos tr\u00eas tamanhos de potes diferentes com valores: Pequeno - R$6,99, M\u00e9dio - R$9,99 e Grande - 12,99. Gostaria de realizar um pedido?",
+        "Nossos potes possuem tr\u00eas tamanhos com os respectivos valores: Pequeno - R$6,99, M\u00e9dio - R$9,99 e Grande - 12,99. Podemos anotar o seu pedido?"
       ],
-      "context_set": ""
+      "context_set": "",
+      "lifecycle": "2020-06-27"
     },
     {
-      "tag": "sabores-disponibilidade",
+      "tag": "sorvetes-disponiveis",
       "patterns": [
-        "Quais os sabores disponíveis?",
-        "Quais os sabores?",
+        "Quais os sorvetes dispon\u00edveis?",
+        "Quais os sorvetes?",
         "Sabores",
-        "Quais os sabores de sorvetes?",
-        "Qual sabor disponível?",
-        "Sabor disponível",
-        "Sabor",
-        "Quais os tipos de sorvete disponíveis?",
-        "Tipos de sorvete",
+        "Quais os sorvetes de sorvetes?",
+        "Qual sabor dispon\u00edvel?",
+        "Sabor dispon\u00edvel",
+        "Produto",
+        "Quais os tipos de sorvetes dispon\u00edveis?",
+        "Tipos de sorvetes",
         "Tipo",
-        "Quais sorvetes disponíveis?",
-        "Qual sorvete disponível?"
+        "Quais sorvetes dispon\u00edveis?",
+        "Qual sorvetes dispon\u00edvel?"
       ],
       "responses": [
-        "Bom, os nossos sabores disponíveis são bem variados, no momento possuímos disponíveis Chocolate, Morango, Creme e Flocos",
-        "Temos disponíveis para você sorvetes nos sabores Chocolate, Morango, Creme e Flocos",
-        "Aproveite nossos sabores de Chocolate, Morango, Creme e Flocos"
+        "Temos Sorvete de Pote KIBON Cremos\u00edssimo Creme 1,5L por R$ 18,90\n                \n\n                    R$ 15,99",
+        "Temos Sorvete Ben & Jerry's Chocolate Fudge Browie 458ml por R$ 37,99\n                \n\n                    R$ 29,98",
+        "Temos Sorvete de Pote KIBON Cremos\u00edssimo Flocos 1,5L por R$ 18,90\n                \n\n                    R$ 15,99",
+        "Temos Sorvete Nestl\u00e9 Napolitano Flocos 1,5L por R$ 16,90",
+        "Temos Sorvete Nestl\u00e9 Tradicional Flocos Pote 1,5L por R$ 16,90",
+        "Temos Sorvete Nestl\u00e9 Tradicional Creme Pote 1,5L por R$ 16,90",
+        "Temos Sorvete Gourmet Super Nosso Chocolate Belga 80% Cacau 750ml por R$ 25,90",
+        "Temos Sorvete Ben & Jerry's Like Sugar 458ml por R$ 37,99\n                \n\n                    R$ 29,98",
+        "Temos Sorvete Garoto Chocolate Branco e Negresco 1,5l por R$ 18,90",
+        "Temos Sorvete Kibon Mousse Chocolate 1,3L por R$ 18,90",
+        "Temos Sorvete Gourmet Super Nosso Cookies & Cream 750ml por R$ 19,90",
+        "Temos Sorvete Kibon Cremos\u00edssimo Napolitano Especial 2L por R$ 27,90",
+        "Temos SORV BEN & JERRYS 458ML-PT DOUBLE DOUGH por R$ 37,99\n                \n\n                    R$ 29,98",
+        "Temos Sorvete Gourmet Super Nosso Pistache 750ml por R$ 25,90",
+        "Temos Sorvete Ben & Jerry's New York Fudge Chunk Pote 120 ml por R$ 15,90",
+        "Temos Sobremesa Torta Holandesa Miss Daisy Caixa 470 g por R$ 29,90\n                \n\n                    R$ 21,90",
+        "Temos Sorvete Gourmet Super Nosso Baunilha em Favas 750ml por R$ 19,90",
+        "Temos Sorvete de Pote KIBON Cremos\u00edssimo Napolitano 1,5L por R$ 18,90\n                \n\n                    R$ 15,99",
+        "Temos Sorvete Ben & Jerry's New York Super Fudge Chunk 458ml por R$ 37,99\n                \n\n                    R$ 29,98",
+        "Temos Sorvete Gourmet Super Nosso Doce de Leite 750 ml por R$ 19,90",
+        "Temos Sorvete Nestl\u00e9 Tradicional Napolitano Pote 1,5L por R$ 16,90",
+        "Temos Sorvete Gourmet Super Nosso Gianduia 750 ml por R$ 19,90",
+        "Temos Sorvete Garoto Chocolate Ao Leite 1,5l por R$ 18,90",
+        "Temos Sorvete Lacta Diamante Negro e Laka 1,5L por R$ 24,90",
+        "Temos Sorvete Kibon Cremosissimo 4 em 1 Chocoleite 2L por R$ 25,49",
+        "Temos Sorvete Kibon Chicabon 1,5L por R$ 18,90\n                \n\n                    R$ 15,99",
+        "Temos Sorvete Kibon Mousse Lim\u00e3o 1,3L por R$ 18,90",
+        "Temos Sorbet Gourmet Super Nosso Morango 750 ml por R$ 19,90",
+        "Temos Sorvete Kibon Cremos\u00edssimo 4 em 1 2L por R$ 25,49",
+        "Temos SORV BEN & JERRYS 120ML-PT DOUGHNT WORRY por R$ 15,90",
+        "Temos Sorvete Kibon Mousse Maracuj\u00e1 1,3L por R$ 18,90",
+        "Temos Sorvete Lacta Chocolates Ao Leite, Laka e Meio Amargo 1,5L por R$ 24,90",
+        "Temos Sorvete Kibon Cremosissimo Creme Zero Lactose 800ml por R$ 22,90",
+        "Temos Sorvete Nestl\u00e9 Especial Brigadeiro Pote 1,5L por R$ 21,90",
+        "Temos Sorvete Kibon Pote M&M\u00b4s 800g por R$ 20,99",
+        "Temos Petit Gateau Mr Bey Leitinho e Chocolate 120g por R$ 19,99",
+        "Temos Picol\u00e9 Kibon Toddynho Unidade por R$ 2,59",
+        "Temos Sorvete NESTL\u00c9 Especial Galak 1,5L por R$ 21,90",
+        "Temos Sorvete Gourmet Super Nosso Coco 750 ml por R$ 19,90",
+        "Temos Sorvete Kibon Blast Snickers 800ml por R$ 20,99",
+        "Temos Gelo Gel\u00f3timo em Cubo 4Kg por R$ 14,90",
+        "Temos Sorvete Kibon Cremos\u00edssimo Napolitano Zero Lactose 800ml por R$ 22,90",
+        "Temos Sorvete Kibon Sorveteria Passas ao Rum 1,5L por R$ 18,90\n                \n\n                    R$ 15,99",
+        "Temos Sorvete NESTL\u00c9 Especial Napolitano Exclusivo 1,5L por R$ 21,90",
+        "Temos Sorvete Kibon Ovomaltine 800ml por R$ 20,99",
+        "Temos Sorvete Kibon Mordisko Baunilha 65g por R$ 6,59",
+        "Temos Sorvete Kibon Magnum Pralin\u00e9 69g por R$ 11,59",
+        "Temos Sorvete Kibon Slime Sabor Surpresa 54g por R$ 6,59"
       ],
-      "context_set": ""
+      "context_set": "",
+      "lifecycle": "2020-06-27"
     },
     {
       "tag": "sabores-pedido",
@@ -290,46 +345,49 @@
         "Quero Floco"
       ],
       "responses": [
-        "Agora que já sei o sabor, qual o tamanho do pote que gostaria de adquirir? Pequeno, médio ou grande?",
-        "Agora me informe o tamanho do pote desejado, pequeno, médio ou grande?",
-        "Você tem bom gosto. Me fala também o tamanho do pote que você quer, pequeno, médio ou grande?",
-        "Agora que já sei o sabor, qual o tamanho do pote que gostaria de adquirir? Pequeno, médio ou grande?",
-        "Agora me informe o tamanho do pote desejado, pequeno, médio ou grande?",
-        "Você tem bom gosto. Me fala também o tamanho do pote que você quer, pequeno, médio ou grande?",
-        " Agora que já sei o sabor, qual o tamanho do pote que gostaria de adquirir? Pequeno, médio ou grande?",
-        "Agora me informe o tamanho do pote desejado, pequeno, médio ou grande?",
-        "Você tem bom gosto. Me fala também o tamanho do pote que você quer, pequeno, médio ou grande?",
-        "Flocos é muito bom! Agora que já sei o sabor, qual o tamanho do pote que gostaria de adquirir? Pequeno, médio ou grande?",
-        "Agora me informe o tamanho do pote desejado, pequeno, médio ou grande?",
-        "Você tem bom gosto. Me fala também o tamanho do pote que você quer, pequeno, médio ou grande?"
+        "Agora que j\u00e1 sei o sabor, qual o tamanho do pote que gostaria de adquirir? Pequeno, m\u00e9dio ou grande?",
+        "Agora me informe o tamanho do pote desejado, pequeno, m\u00e9dio ou grande?",
+        "Voc\u00ea tem bom gosto. Me fala tamb\u00e9m o tamanho do pote que voc\u00ea quer, pequeno, m\u00e9dio ou grande?",
+        "Agora que j\u00e1 sei o sabor, qual o tamanho do pote que gostaria de adquirir? Pequeno, m\u00e9dio ou grande?",
+        "Agora me informe o tamanho do pote desejado, pequeno, m\u00e9dio ou grande?",
+        "Voc\u00ea tem bom gosto. Me fala tamb\u00e9m o tamanho do pote que voc\u00ea quer, pequeno, m\u00e9dio ou grande?",
+        " Agora que j\u00e1 sei o sabor, qual o tamanho do pote que gostaria de adquirir? Pequeno, m\u00e9dio ou grande?",
+        "Agora me informe o tamanho do pote desejado, pequeno, m\u00e9dio ou grande?",
+        "Voc\u00ea tem bom gosto. Me fala tamb\u00e9m o tamanho do pote que voc\u00ea quer, pequeno, m\u00e9dio ou grande?",
+        "Flocos \u00e9 muito bom! Agora que j\u00e1 sei o sabor, qual o tamanho do pote que gostaria de adquirir? Pequeno, m\u00e9dio ou grande?",
+        "Agora me informe o tamanho do pote desejado, pequeno, m\u00e9dio ou grande?",
+        "Voc\u00ea tem bom gosto. Me fala tamb\u00e9m o tamanho do pote que voc\u00ea quer, pequeno, m\u00e9dio ou grande?"
       ],
-      "context_set": ""
+      "context_set": "",
+      "lifecycle": "2020-06-27"
     },
     {
       "tag": "tamanho-confirmacao",
-      "patterns": ["Tamanho Pequeno", "Tamanho Médio", "Tamanho Grande"],
+      "patterns": ["Tamanho Pequeno", "Tamanho M\u00e9dio", "Tamanho Grande"],
       "responses": [
-        "Pequeno no tamanho, GIGANTE no sabor! Seu sorvete já está sendo preparado para o envio, enquanto isso, me informe o método de pagamento desejado.",
-        "Potes na média certa :) Seu sorvete já está sendo preparado para o envio, enquanto isso, me informe o método de pagamento desejado.",
-        "Bateu aquela vontade monstruosa de tomar sorvete? Um pote BEM GRANDE resolve seu problema. Seu sorvete já está sendo preparado para o envio, enquanto isso, me informe o método de pagamento desejado."
+        "Pequeno no tamanho, GIGANTE no sabor! Seu sorvete j\u00e1 est\u00e1 sendo preparado para o envio, enquanto isso, me informe o m\u00e9todo de pagamento desejado.",
+        "Potes na m\u00e9dia certa :) Seu sorvete j\u00e1 est\u00e1 sendo preparado para o envio, enquanto isso, me informe o m\u00e9todo de pagamento desejado.",
+        "Bateu aquela vontade monstruosa de tomar sorvete? Um pote BEM GRANDE resolve seu problema. Seu sorvete j\u00e1 est\u00e1 sendo preparado para o envio, enquanto isso, me informe o m\u00e9todo de pagamento desejado."
       ],
-      "context_set": ""
+      "context_set": "",
+      "lifecycle": "2020-06-27"
     },
     {
       "tag": "metodo-pagamento",
       "patterns": [
         "Pagar no Dinheiro",
-        "Pagar Cartão de Crédito",
-        "Pagar Crédito",
-        "Pagar Cartão de Débito",
+        "Pagar Cart\u00e3o de Cr\u00e9dito",
+        "Pagar Cr\u00e9dito",
+        "Pagar Cart\u00e3o de D\u00e9bito",
         "Pagar Debito"
       ],
       "responses": [
-        "Método de pagamento confirmado, seu pedido está pronto para ser enviado, para isso basta digitar ENVIAR, e logo logo seu sorvete estará aí.",
+        "M\u00e9todo de pagamento confirmado, seu pedido est\u00e1 pronto para ser enviado, para isso basta digitar ENVIAR, e logo logo seu sorvete estar\u00e1 a\u00ed.",
         "Entendido, confirme o pedido digitando ENVIAR, depois basta aguardar alguns minutos para se deliciar com seu sorvete.",
-        "Ótimo :) agora temos tudo o que precisamos, basta confirmar a entrega digitando ENVIAR, e seu produto chegará ai o mais rápido possível!"
+        "\u00d3timo :) agora temos tudo o que precisamos, basta confirmar a entrega digitando ENVIAR, e seu produto chegar\u00e1 ai o mais r\u00e1pido poss\u00edvel!"
       ],
-      "context_set": ""
+      "context_set": "",
+      "lifecycle": "2020-06-27"
     },
     {
       "tag": "envio-aguardo",
@@ -341,12 +399,43 @@
         "Entregue no meu apartarmento"
       ],
       "responses": [
-        "Ótimo, nosso entregador está a caminho! Basta aguardar e em alguns instantes ele estará aí.",
-        "Ótimo! Em breve seu produto estará aí, basta aguardar alguns minutos.",
-        "Seu pedido já está sendo preparado e será enviado em breve, peço que você aguarde alguns minutos por gentileza.",
-        "Oba! Sorvete é sempre bom e o seu já está a caminho, aguarde alguns minutos e nosso entregador logo estará aí"
+        "\u00d3timo, nosso entregador est\u00e1 a caminho! Basta aguardar e em alguns instantes ele estar\u00e1 a\u00ed.",
+        "\u00d3timo! Em breve seu produto estar\u00e1 a\u00ed, basta aguardar alguns minutos.",
+        "Seu pedido j\u00e1 est\u00e1 sendo preparado e ser\u00e1 enviado em breve, pe\u00e7o que voc\u00ea aguarde alguns minutos por gentileza.",
+        "Oba! Sorvete \u00e9 sempre bom e o seu j\u00e1 est\u00e1 a caminho, aguarde alguns minutos e nosso entregador logo estar\u00e1 a\u00ed"
       ],
-      "context_set": ""
+      "context_set": "",
+      "lifecycle": "2020-06-27"
+    },
+    {
+      "tag": "maior-preco-sorvete",
+      "patterns": [
+        "maior pre\u00e7o",
+        "qual o maior preco",
+        "sorvete mais caro",
+        "qual o sorvete mais caro",
+        "quais os sorvete mais caros"
+      ],
+      "responses": [
+        "Sorvete Kibon Mordisko Baunilha 65g por R$ 6,59 \nSorvete Kibon Slime Sabor Surpresa 54g por R$ 6,59 \nSorvete Ben & Jerry's Chocolate Fudge Browie 458ml por R$ 37,99\n                \n\n                    R$ 29,98 \nSorvete Ben & Jerry's Like Sugar 458ml por R$ 37,99\n                \n\n                    R$ 29,98 \nSORV BEN & JERRYS 458ML-PT DOUBLE DOUGH por R$ 37,99\n                \n\n                    R$ 29,98 \n"
+      ],
+      "context_set": "",
+      "lifecycle": "2020-06-27"
+    },
+    {
+      "tag": "menor-preco-sorvete",
+      "patterns": [
+        "menor pre\u00e7o",
+        "qual o menor preco",
+        "sorvete mais barato",
+        "qual o sorvete mais barato",
+        "quais os sorvete mais baratos"
+      ],
+      "responses": [
+        "Sorvete Kibon Magnum Pralin\u00e9 69g por R$ 11,59 \nGelo Gel\u00f3timo em Cubo 4Kg por R$ 14,90 \nSorvete Ben & Jerry's New York Fudge Chunk Pote 120 ml por R$ 15,90 \nSORV BEN & JERRYS 120ML-PT DOUGHNT WORRY por R$ 15,90 \nSorvete Nestl\u00e9 Napolitano Flocos 1,5L por R$ 16,90 \n"
+      ],
+      "context_set": "",
+      "lifecycle": "2020-06-27"
     }
   ]
 }

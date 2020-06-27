@@ -1,3 +1,4 @@
+from src.webscrapping import saveProductListIntents
 import json as js
 import io
 import os
@@ -7,6 +8,7 @@ intents = os.path.join(dir, 'data/intents-servete.json')
 
 
 def getIntents():
+    saveProductListIntents()
     with io.open(intents, mode="r", encoding="utf-8") as file:
 
         data = js.load(file)
