@@ -1,12 +1,10 @@
 import tflearn as tfl
-import tensorflow as tf
 from src.wordPrecess import WordsProcess
 import numpy as np
 
 
 def createNeural():
     wordsProcess = WordsProcess()
-    tf.reset_default_graph()
     xtraining = np.array(wordsProcess.training)
     yTraining = np.array(wordsProcess.outputRow)
     net = tfl.input_data(shape=[None, len(xtraining[0])])
