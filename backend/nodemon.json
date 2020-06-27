@@ -1,0 +1,11 @@
+{
+  "ignore": [".git", "node_modules/**/node_modules"],
+  "env": {
+    "NODE_ENV": "development"
+  },
+  "watch": ["./src"],
+  "ext": "ts",
+  "execMap": {
+    "ts": "node --inspect -r sucrase/register"
+  }
+}

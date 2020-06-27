@@ -3,4 +3,5 @@ export class Conversa {
     usuario: boolean;
     error: boolean;
     audio: boolean;
+    imagem:boolean;
 }

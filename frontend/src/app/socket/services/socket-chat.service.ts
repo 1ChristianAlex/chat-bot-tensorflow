@@ -29,4 +29,17 @@ export class SocketChatService {
         console.log('audio send');
       });
   }
+  public sendImage(image: File){
+
+    const imagem = new FormData();
+
+    imagem.append('imagem', image);
+
+    this.HttpClient.post(`http://${this.hostname}:${5555}/image`, imagem)
+    .toPromise()
+    .then(() => {
+      console.log('imag send');
+    });
+
+  }
 }
