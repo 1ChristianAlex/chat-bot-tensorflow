@@ -18,7 +18,7 @@ export class SocketChatService {
     ).toPromise();
     return res;
   }
-  public sendAudio(audio: Blob) {
+  public async sendAudio(audio: Blob) {
     const body = new FormData();
 
     body.append('audio', audio);
@@ -40,6 +40,17 @@ export class SocketChatService {
     .then(() => {
       console.log('imag send');
     });
+   }
 
+  public async startAudioBack() {
+    const body = new FormData();
+    body.append('mensage', JSON.stringify({ audio: true }));
+    return new Promise((res, rej) => {
+      this.HttpClient.post(`http://${this.hostname}:${5555}/start-audio`, body)
+        .toPromise()
+        .then((resolve) => {
+          res(resolve);
+        });
+    });
   }
 }

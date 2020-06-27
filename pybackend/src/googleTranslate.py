@@ -1,5 +1,4 @@
 from googletrans import Translator
-import io
 import speech_recognition as sr
 import wave
 
