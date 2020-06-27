@@ -23,34 +23,29 @@ export class ModalChatComponent implements OnInit {
     private Socket: SocketChatService,
     private dom: DomSanitizer,
     private cd: ChangeDetectorRef
-  ) { }
+  ) {}
 
   onSubmit() {
     return this.valor != null ? this.valor : null;
   }
-  selectedFile: File
+  selectedFile: File;
 
   async onFileChanged(event) {
-
     this.selectedFile = event.target.files[0];
 
-    this.enviarImagem(this.selectedFile)
-
+    this.enviarImagem(this.selectedFile);
   }
   async enviarImagem(imagem: File) {
-
     this.Socket.sendImage(imagem).then((res: any) => {
       this.mensagens.push({
         mensagem: String(res.pergunta),
         usuario: true,
         error: false,
         audio: false,
-        imagem:false
+        imagem: false,
       });
       this.preencherMensagem(res.data);
     });
-    
-
   }
 
   async preencherMensagem(response) {
@@ -59,7 +54,7 @@ export class ModalChatComponent implements OnInit {
       usuario: false,
       error: false,
       audio: false,
-      imagem:false
+      imagem: false,
     });
   }
 
@@ -70,7 +65,7 @@ export class ModalChatComponent implements OnInit {
         usuario: true,
         error: false,
         audio: false,
-        imagem:false
+        imagem: false,
       });
       const response: any = await this.Socket.SendMensage(this.valor);
 
@@ -105,7 +100,7 @@ export class ModalChatComponent implements OnInit {
             usuario: true,
             error: false,
             audio: true,
-            imagem: false
+            imagem: false,
           });
           this.audioFiles.push(this.dom.bypassSecurityTrustUrl(audioURL));
           console.log('recorder stopped');
@@ -127,7 +122,7 @@ export class ModalChatComponent implements OnInit {
       usuario: false,
       error: true,
       audio: false,
-      imagem: false
+      imagem: false,
     });
   }
 
@@ -150,7 +145,7 @@ export class ModalChatComponent implements OnInit {
         usuario: true,
         error: false,
         audio: false,
-        imagem:false
+        imagem: false,
       });
       this.preencherMensagem(res.data);
     });

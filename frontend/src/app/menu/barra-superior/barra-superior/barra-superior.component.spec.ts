@@ -8,9 +8,8 @@ describe('BarraSuperiorComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BarraSuperiorComponent ]
-    })
-    .compileComponents();
+      declarations: [BarraSuperiorComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
