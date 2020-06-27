@@ -32,7 +32,7 @@ class WebScrappingSorvete:
         robotReq = requests.get(url_robots)
 
         if robotReq.status_code == 200 or robotReq.status_code == 202:
-            if 'Disallow: /mercearia/sorvetes' in robotReq.content:
+            if 'Disallow: /mercearia/sorvetes' in robotReq.content.decode(encoding='utf-8'):
                 return []
         else:
             return []
@@ -91,6 +91,25 @@ def saveProductListIntents():
                 producsString = [
                     f"{product['title']} por {product['price']} \n" for product in productListMaxPrice]
                 intentsItem['responses'] = ["".join(producsString)]
+
+            if intentsItem['tag'] == "lista-sorvetes" and intentsItem['lifecycle'] != f"{date.today()}":
+                scrapping = WebScrappingSorvete()
+                productLiscDict = scrapping.getProducts()
+                productLiscDictSorted = sorted(
+                    productLiscDict, key=lambda k: k['title'], reverse=True)
+                producsString = [
+                    f"{product['title']} por {product['price']} \n" for product in productLiscDictSorted]
+                intentsItem['responses'] = [
+                    "Temos os seguintes sorvetes: ".join(producsString)]
+
+            if intentsItem['tag'] == "escolha-sorvete-produto" and intentsItem['lifecycle'] != f"{date.today()}":
+                scrapping = WebScrappingSorvete()
+                productLiscDict = scrapping.getProducts()
+                productLiscDictSorted = sorted(
+                    productLiscDict, key=lambda k: k['title'], reverse=True)
+                producsString = [
+                    f"Quero o {product['title']} \n" for product in productLiscDictSorted]
+                intentsItem['patterns'] = producsString
 
             intentsItem['lifecycle'] = f"{date.today()}"
             newIntentsData['intents'].append(intentsItem)
